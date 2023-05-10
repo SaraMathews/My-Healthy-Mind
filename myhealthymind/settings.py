@@ -29,7 +29,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-saramathews-my-healthy-m-x7elrhhelu.us2.codeanyapp.com', 'myhealthymind-pp4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-saramathews-my-healthy-m-49ma2tzlj8.us2.codeanyapp.com',
+                 'myhealthymind-pp4.herokuapp.com', 'localhost']
 
 
 # Application definition
