@@ -67,12 +67,16 @@ It gives the user the flexibility to delete entries that no longer serve a purpo
 ### Unfixed bugs
 
 ## Technologies
-
+Django, gunicorn(server heroku), 
+supporting libraries - dj_database_url, psycopg2
+cloudinary
 ### Languages
 
 ### Frameworks and libraries
 
 ### Databases
+PostgreSQL
+
 
 ## Deployment
 
