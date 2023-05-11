@@ -1,6 +1,7 @@
 html,
 body {
-    min-height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -11,26 +12,50 @@ body {
 .navbar-big {
     height: 90px;
     font-size: 1.5rem;
-    background-color: #fae4cd;
+    background-color: #f8eee3;
+    z-index: 1;
 }
 
+.main-container {
+    padding: 0;
+    min-height: 100vh;
+}
+
+.list-bg {
+    background-color: white;
+    padding-left: 15px;
+    width: 170px;
+    border-radius: 5px;
+}
+
+.first-column {
+    height: 50vh;
+    background-color: #f8eee3
+}
+
+.second-column {
+    background-color: white;
+    height: 50vh;
+}
+
+.box {
+    padding: 15px;
+}
 
 footer {
     height: 70px;
-    background-color: #fae4cd;
+    background-color: #f8eee3;
     padding-top: 10px;
+
 }
 
-.main-content-container {
-    background-color: #fae4cd;
-    height: 500px;
-    margin-top: 80px;
-    border-radius: 5px;
-}
-
-.quote-container {
-    background-color: #d1eddb;
-    height: 200px;
-    border-radius: 5px;
-    margin-top: 50px;
+/* Media queries */
+/*Media queries for medium screen size from 990px width and above */
+@media screen and (min-width: 990px) {
+    .list-bg {
+        background-color: transparent;
+        padding-left: 0;
+        width: auto;
+        border-radius: 0;
+    }
 }
