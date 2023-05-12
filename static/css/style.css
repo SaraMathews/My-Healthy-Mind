@@ -1,45 +1,110 @@
+/* My Healthy Mind logo */
 .logo {
     font-size: 2rem;
-    font-family: 'Playfair', serif;
+    font-family: lato;
+    background-color: #fad0c4;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+/* Navigation bar */
 .navbar-big {
     height: 90px;
     font-size: 1.5rem;
     background-color: #f8eee3;
     z-index: 1;
+    font-family: lato;
 }
 
+/* Hamburger meny toggle */
+.hamburger {
+    margin-top: 12px;
+}
+
+.list-bg {
+    background-color: #d6c0a8;
+    width: 157px;
+}
+
+#hamburger-home {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#signup-home {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ul-padding-hamburger {
+    margin-left: 10px;
+}
+
+/* Fist container with welcome text */
 .jumbotron {
-    height: 500px;
+    height: 650px;
     background-color: #f8eee3;
+    font-family: lato;
+
 }
 
-.container-fluid {
+/* Second container with features card and quote */
+.container-features {
     margin-bottom: 100px;
-}
-
-.card {
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    margin-top: 150px;
+    font-family: lato;
 }
 
 .card-rounded {
     height: 500px;
     overflow: hidden;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    margin-top: 40px;
 }
+
+.image {
+    object-fit: cover;
+    height: 100%;
+}
+
+.card-body-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f8eee3;
+    height: 250px;
+}
+
+.button {
+    background-color: white;
+    color: #5C4033;
+    border-radius: 5px;
+
+}
+
+.button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #fad0c4;
+}
+
+/* Footer */
 
 footer {
     height: 70px;
     background-color: #f8eee3;
     padding-top: 10px;
+    font-family: lato;
 }
 
 
 
-/* Media queries */
-/*Media queries for medium screen size from 990px width and above */
+/*Media queries 
+Media queries for medium screen size from 990px width and above */
+
 @media screen and (min-width: 990px) {
     .list-bg {
         background-color: transparent;
@@ -49,6 +114,16 @@ footer {
     }
 }
 
+@media screen and (max-width: 364px) {
+    .hamburger {
+        position: fixed;
+        margin-top: 100px;
+        right: 17px;
+        background-color: #f8eee3;
+    }
+}
+
+/*
 @media screen and (min-width: 1300px) {
     .card-rounded {
         height: 650px;
@@ -67,4 +142,5 @@ footer {
         margin: 0 auto;
 
     }
-}
+} 
+*/
