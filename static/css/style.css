@@ -2,7 +2,7 @@
 .logo {
     font-size: 2rem;
     font-family: lato;
-    background-color: #fad0c4;
+    background-color: #F3DED4;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     padding-left: 10px;
@@ -44,7 +44,7 @@
 
 /* Fist container with welcome text */
 .jumbotron {
-    height: 650px;
+    height: 550px;
     background-color: #f8eee3;
     font-family: lato;
 
@@ -52,7 +52,7 @@
 
 /* Second container with features card and quote */
 .container-features {
-    margin-bottom: 100px;
+    margin-bottom: 110px;
     font-family: lato;
 }
 
@@ -62,17 +62,15 @@
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     margin-top: 40px;
+    width: 19rem;
 }
 
 .image {
     object-fit: cover;
-    height: 100%;
+    height: 50%;
 }
 
 .card-body-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     text-align: center;
     background-color: #f8eee3;
     height: 250px;
@@ -82,13 +80,12 @@
     background-color: white;
     color: #5C4033;
     border-radius: 5px;
-
 }
 
 .button:hover {
     cursor: pointer;
     color: white;
-    background-color: #fad0c4;
+    background-color: #F3DED4;
 }
 
 /* Footer */
