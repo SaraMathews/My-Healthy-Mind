@@ -41,10 +41,10 @@
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="daily_journal.html">Daily Journal</a>
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'daily_journal' %}">Daily Journal</a>
                     </li>
                     <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="#">Past Journals</a>
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'previous_journals' %}">Past Journals</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -60,84 +60,29 @@
                 </ul>
             </div>
         </nav>
-
-        <!-- Welcome text container -->
-        <div class="container-fluid p-0 first-container">
-            <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
-                <div class="container">
-                    <h1 class="display-4">Welcome!</h1>
-                    <p class="lead">Here on the My Healthy Mind website we provide you with a safe space to log your
-                        daily
-                        journal,
-                        allowing you to keep track of your thoughts and
-                        feelings. We strongly believe that maintaining a positive mindset and prioritizing your
-                        well-being is vital for a
-                        healthy mind, and we're here to support you in achieving that. Our user-friendly journaling
-                        system enables you to
-                        reflect on your experiences and emotions, set goals, and monitor your progress as you work
-                        towards a happier and
-                        healthier you.</p>
-                </div>
+        <main>
+            {% block content %}
+            {% endblock content %}
+            <div class="container">
+                {% block journalform %}
+                {% endblock journalform %}
             </div>
-
-            <!-- Card container -->
-            <div class="container container-features">
-                <div class="row justify-content-around">
-                    <div class="card card-rounded card-custom">
-                        <img src="https://m.media-amazon.com/images/I/518tUTYNbsL._AC_UF1000,1000_QL80_.jpg"
-                            class="card-img-top image" alt="...">
-                        <div class="card-body card-body-bottom d-flex flex-column">
-                            <h5 class="card-title">Daily Journal</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the
-                                card's
-                                content.</p>
-                            <a href="daily_journal.html" class="btn button mt-auto mx-auto">Log my Daily Journal</a>
-                        </div>
-                    </div>
+        </main>
+        <!-- Footer -->
+        <footer class="footer fixed-bottom">
+            <p class="m-0 text-center text-black">Made by Sara Mathews</p>
+            <p class="m-0 text-center text-black">Follow us:
+                <i class="fab fa-facebook-square ms-3"></i>
+                <i class="fab fa-twitter-square ms-3"></i>
+                <i class="fab fa-instagram-square ms-3"></i>
+                <i class="fab fa-youtube-square ms-3"></i>
+            </p>
+        </footer>
 
 
-                    <div class="card card-rounded card-custom">
-                        <img src="https://c8.alamy.com/comp/2N7B2N7/human-brain-with-flowers-and-butterflies-mental-health-and-self-care-concept-positive-thinking-creative-mind-2N7B2N7.jpg"
-                            class="card-img-top image" alt="...">
-                        <div class="card-body card-body-bottom">
-                            <h5 class="card-title">Daily Quote</h5>
-                            <p class="card-text">#</p>
-                        </div>
-                    </div>
-
-                    <div class="card card-rounded card-custom d-none d-lg-block">
-                        <img src="https://hbr.org/resources/images/article_assets/2021/02/Feb21_23_1296183274.jpg"
-                            class="card-img-top image" alt="...">
-                        <div class="card-body card-body-bottom d-flex flex-column">
-                            <h5 class="card-title">Past Journals</h5>
-                            <p class="card-text">
-                                Revisit your past journals, reflect, and continue your journey towards a healthier
-                                mind. Here, you can view all your previous journal entries, edit them, or delete them.
-                            </p>
-
-                            <a href="#" class="btn button mt-auto mx-auto">View past Journals</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <footer class="footer fixed-bottom">
-                <p class="m-0 text-center text-black">Made by Sara Mathews</p>
-                <p class="m-0 text-center text-black">Follow us:
-                    <i class="fab fa-facebook-square ms-3"></i>
-                    <i class="fab fa-twitter-square ms-3"></i>
-                    <i class="fab fa-instagram-square ms-3"></i>
-                    <i class="fab fa-youtube-square ms-3"></i>
-                </p>
-            </footer>
-
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     </main>
 </body>
 
