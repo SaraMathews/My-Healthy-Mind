@@ -84,7 +84,7 @@
 
 .button:hover {
     cursor: pointer;
-    color: white;
+    color: #5C4033;
     background-color: #F3DED4;
 }
 
@@ -98,6 +98,40 @@ footer {
 }
 
 
+
+/* daily_journal.html */
+
+.daily-journal-container {
+    margin-top: 70px;
+
+}
+
+.form-daily-journal {
+    background-color: #f8eee3;
+    border: 1px solid #5C4033;
+    margin-bottom: 130px;
+}
+
+.date-label {
+    width: 140px;
+    position: relative;
+    margin: auto;
+}
+
+.rating-today {
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.amazing-range {
+    margin-right: 20px;
+}
+
+.form-group>h3 {
+    margin-top: 20px;
+    font-weight: 400;
+}
 
 /*Media queries 
 Media queries for medium screen size from 990px width and above */

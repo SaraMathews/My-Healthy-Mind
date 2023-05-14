@@ -1,29 +1,54 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block journalform %}
-<form>
-    <div class="form-group">
-        <label for="heading">My Daily Journal</label>
-        <input type="text" class="form-control" id="heading" name="heading">
-    </div>
-    <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" class="form-control" id="date" name="date">
-    </div>
-    <div class="form-group">
-        <label for="content">Content</label>
-        <textarea class="form-control" id="content" name="content" rows="3"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="range">Range</label>
-        <input type="range" class="form-control-range" id="range" name="range" min="1" max="5">
-    </div>
-    <div class="form-group">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Submit Journal</button>
-            <button type="button" class="btn btn-secondary">Discard</button>
+{% load static %}
+
+<div class="container-fluid p-0 first-container">
+    <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
+        <div class="container">
+            <h1 class="display-4">Log your Daily Journal</h1>
+            <p class="lead">Here on the My Healthy Mind website we provide you with a safe space to log your
+                daily
+                journal,
+                allowing you to keep track of your thoughts and
+                feelings. We strongly believe that maintaining a positive mindset and prioritizing your
+                well-being is vital for a
+                healthy mind, and we're here to support you in achieving that. Our user-friendly journaling
+                system enables you to
+                reflect on your experiences and emotions, set goals, and monitor your progress as you work
+                towards a happier and
+                healthier you.</p>
         </div>
     </div>
-</form>
+    <div class="d-flex align-items-center justify-content-center daily-journal-container"></div>
+    <div class=" container text-center">
+        <form class="form-daily-journal ">
+            <div class="form-group">
+                <h3>My Daily Journal</h3>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control date-label" id="date" name="date">
+            </div>
 
-{% endblock %}
+            <div class="form-group ">
+                <label for="content">What's on your mind today?</label>
+                <textarea class="form-control text-area-form" id="content" name="content" rows="12"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="range">Today's rating</label>
+                <input type="range" class="form-control-range rating-today" id="range" name="range" min="1" max="5">
+
+                <div class="d-flex justify-content-center">
+                    <p>Terrible</p>
+                    <p>Amazing</p>
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-end">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn button">Submit Journal</button>
+                    <button type="button" class="btn button">Discard</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
