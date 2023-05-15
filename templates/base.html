@@ -1,9 +1,9 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% load static %}
+    <title>My Healty Mind</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,14 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>My Healty Mind</title>
 </head>
 
 <body>
     <main>
         <!-- Logo -->
         <nav class="navbar navbar-expand-lg navbar-light navbar-big">
-            <a class="navbar-brand logo" href="#">My Healthy Mind</a>
+            <a class="navbar-brand logo" href="{% url 'home_page' %}">My Healthy Mind</a>
 
             <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -36,15 +35,12 @@
             <!-- Navigation with hamburger many -->
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active list-bg ml-auto" id="hamburger-home">
-                        <a class="nav-link ul-padding-hamburger" href="#">Home <span
-                                class="sr-only">(current)</span></a>
+                    <li class="nav-item list-bg ml-auto" id="hamburger-home">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'home_page' %}">Home</a>
                     </li>
                     <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'daily_journal' %}">Daily Journal</a>
-                    </li>
-                    <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'previous_journals' %}">Past Journals</a>
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'daily_journal' %}">Daily
+                            Journal</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -60,14 +56,14 @@
                 </ul>
             </div>
         </nav>
-        <main>
+        <div>
             {% block content %}
             {% endblock content %}
 
             {% block journalform %}
             {% endblock journalform %}
 
-        </main>
+        </div>
         <!-- Footer -->
         <footer class="footer fixed-bottom">
             <p class="m-0 text-center text-black">Made by Sara Mathews</p>

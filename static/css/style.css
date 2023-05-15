@@ -1,3 +1,16 @@
+h3 {
+    font-weight: 500;
+}
+
+h5 {
+    font-style: italic;
+}
+
+h5,
+h6 {
+    font-weight: 400;
+}
+
 /* My Healthy Mind logo */
 .logo {
     font-size: 2rem;
@@ -59,6 +72,7 @@
 .card-rounded {
     height: 500px;
     overflow: hidden;
+    border: 3px solid #F3DED4;
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     margin-top: 40px;
@@ -74,19 +88,22 @@
     text-align: center;
     background-color: #f8eee3;
     height: 250px;
+
 }
 
 .button {
     background-color: white;
     color: #5C4033;
     border-radius: 5px;
+    border: 1px solid #5C4033;
+
 }
 
 .button:hover {
     cursor: pointer;
-    color: #5C4033;
     background-color: #F3DED4;
 }
+
 
 /* Footer */
 
@@ -98,52 +115,57 @@ footer {
 }
 
 
-
 /* daily_journal.html */
+/* Journal form */
 
-.daily-journal-container {
+.outer-container {
     margin-top: 70px;
-
+    border: 3px solid #F3DED4;
+    border-radius: 10px;
 }
 
-.form-daily-journal {
+.inner-container {
     background-color: #f8eee3;
-    border: 1px solid #5C4033;
-    margin-bottom: 130px;
+    background-image: url('https://img.freepik.com/premium-photo/human-brain-with-flowers-health-concept_75891-2757.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+    margin: 15px 10px;
+    border-radius: 10px;
 }
 
-.date-label {
-    width: 140px;
-    position: relative;
-    margin: auto;
-}
-
-.rating-today {
-    width: 50%;
-    position: relative;
-    margin: auto;
-}
-
-.amazing-range {
+.btn-form {
     margin-right: 20px;
 }
 
-.form-group>h3 {
-    margin-top: 20px;
-    font-weight: 400;
+.textarea-form-content {
+    border: 2px solid #d6c0a8;
 }
 
-/*Media queries 
-Media queries for medium screen size from 990px width and above */
-
-@media screen and (min-width: 990px) {
-    .list-bg {
-        background-color: transparent;
-        padding-left: 0;
-        width: auto;
-        border-radius: 0;
-    }
+.rating-range {
+    background-color: white;
+    border: 2px solid #d6c0a8;
+    border-radius: 5px;
+    padding: 5px 5px;
 }
+
+/* Previous Journals container */
+.previous-journals-container {
+    margin-bottom: 150px;
+    margin-top: 50px;
+    background-color: #f8eee3;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-previous {
+    font-size: small;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+/*Media queries */
 
 @media screen and (max-width: 364px) {
     .hamburger {
@@ -154,24 +176,29 @@ Media queries for medium screen size from 990px width and above */
     }
 }
 
-/*
-@media screen and (min-width: 1300px) {
-    .card-rounded {
-        height: 650px;
+@media screen and (min-width: 990px) {
+    .list-bg {
+        background-color: transparent;
+        padding-left: 0;
+        width: auto;
+        border-radius: 0;
     }
 
-    .card {
-        border-top-left-radius: 300px;
-        border-top-right-radius: 300px;
+    .container-features {
+        margin-top: 110px;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .card {
-        width: 65vw;
-        height: 500px;
-        margin: 0 auto;
-
+@media screen and (min-width: 991px) {
+    .rating-range {
+        width: 55%;
     }
-} 
-*/
+
+    .textarea-form-content {
+        width: 55%;
+    }
+
+    .btn-previous {
+        font-size: large;
+    }
+}

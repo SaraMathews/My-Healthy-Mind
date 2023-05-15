@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block journalform %}
 {% load static %}
-
+<!--Jumbotron-->
 <div class="container-fluid p-0 first-container">
     <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
         <div class="container">
@@ -19,36 +19,65 @@
                 healthier you.</p>
         </div>
     </div>
-    <div class="d-flex align-items-center justify-content-center daily-journal-container"></div>
-    <div class=" container text-center">
-        <form class="form-daily-journal ">
-            <div class="form-group">
-                <h3>My Daily Journal</h3>
+</div>
+<div class="container outer-container d-flex justify-content-center align-items-center">
+    <div class="container-fluid inner-container">
+        <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
+            <div class="column form-group">
+                <h3>Daily Journal</h3>
             </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" class="form-control date-label" id="date" name="date">
-            </div>
+            <div class="column mr-lg-5 form-group date-box"><label for="date">
+                    Date
+                </label><input type="date" class="form-control date-label" id="date" name="date"></div>
+        </div>
+        <div class="column ml-lg-3 form-group">
+            <label for="inputContent">
+            </label>
+            <textarea placeholder="What's on your mind today?" class="form-control textarea-form-content"
+                id="inputContent" name="content" rows="10" required></textarea>
+        </div>
+        <div class=" column ml-lg-3 form-group rating-range">
+            <label for="range">
+                Rate your day
+            </label>
+            <input type="range" class="form-control-range rating-today" id="range" name="range" min="1" max="5">
 
-            <div class="form-group ">
-                <label for="content">What's on your mind today?</label>
-                <textarea class="form-control text-area-form" id="content" name="content" rows="12"></textarea>
+            <div class="d-flex justify-content-between">
+                <h6>Terrible</h6>
+                <h6>Okey</h6>
+                <h6>Amazing</h6>
             </div>
-            <div class="form-group">
-                <label for="range">Today's rating</label>
-                <input type="range" class="form-control-range rating-today" id="range" name="range" min="1" max="5">
-
-                <div class="d-flex justify-content-center">
-                    <p>Terrible</p>
-                    <p>Amazing</p>
-                </div>
+        </div>
+        <div class="form-group d-flex justify-content-end mb-lg-3 mr-lg-3">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn button btn-form btn-previous">Submit Journal</button>
+                <button type="button" class="btn button btn-previous">Discard</button>
             </div>
-            <div class="form-group d-flex justify-content-end">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn button">Submit Journal</button>
-                    <button type="button" class="btn button">Discard</button>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
-    {% endblock %}
+</div>
+
+
+<!--View previous Journals-->
+<div class="container outer-container previous-journals-container ">
+    <div class="row d-flex align-items-center justify-content-start">
+        <div class="column">
+            <button class="btn button btn-previous" type="button" data-toggle="collapse"
+                data-target="#collapseJournalForm" aria-expanded="false" aria-controls="collapseJournalForm">
+                Daily Journal 'date'
+            </button>
+        </div>
+        <!---<div class="column ml-auto">
+            <div class="text-right">
+                <button class="btn button btn-previous" type="button">
+                    Edit Journal
+                </button>
+                <button class="btn button btn-previous" type="button">
+                    Delete Journal
+                </button>
+            </div>
+        </div>
+        -->
+    </div>
+</div>
+{% endblock %}
