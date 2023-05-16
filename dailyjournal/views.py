@@ -6,5 +6,4 @@ from .forms import JournalForm
 class LogJournalView(CreateView):
     model = JournalLog
     form_class = JournalForm
-    template_name = 'dailyjournal/daily_journal.html'
-
+    template_name = 'daily_journal.html'

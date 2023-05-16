@@ -18,7 +18,7 @@ class JournalLog(models.Model):
     created_on = models.DateTimeField()
     content = models.TextField()
     daily_rating = models.CharField(
-        max_length=1, choices=DAILY_RATING_OPTIONS, default='3')
+        max_length=2, choices=DAILY_RATING_OPTIONS, default='3')
     featured_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
