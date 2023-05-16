@@ -15,7 +15,7 @@ DAILY_RATING_OPTIONS = (
 
 class JournalLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_on = models.DateTimeField()
+    created_on = models.DateField()
     content = models.TextField()
     daily_rating = models.CharField(
         max_length=2, choices=DAILY_RATING_OPTIONS, default='3')

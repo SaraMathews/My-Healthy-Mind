@@ -191,7 +191,7 @@ footer {
 
 @media screen and (min-width: 991px) {
     .rating-range {
-        width: 55%;
+        width: 20%;
     }
 
     .textarea-form-content {
