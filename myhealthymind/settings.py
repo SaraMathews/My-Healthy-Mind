@@ -27,7 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-saramathews-my-healthy-m-49ma2tzlj8.us2.codeanyapp.com',
                  'myhealthymind-pp4.herokuapp.com', 'localhost']
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'dailyjournal',
+    'home',
 ]
 
 MIDDLEWARE = [

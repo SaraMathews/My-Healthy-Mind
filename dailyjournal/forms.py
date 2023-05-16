@@ -1,3 +1,6 @@
+from django import forms
+from .models import JournalLog
+
 
 class JournalForm(forms.ModelForm):
     class Meta:

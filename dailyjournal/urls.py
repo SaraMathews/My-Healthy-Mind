@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import LogJournalView
+
+app_name = 'dailyjournal'
 
 urlpatterns = [
-    path('', views.home_page, name='home'),
-    path('daily_journal/', views.daily_journal, name='daily_journal'),
-    path('home_page/', views.home_page, name='home_page'),
+    path('log/', LogJournalView.as_view(), name='log_journal'),
 ]

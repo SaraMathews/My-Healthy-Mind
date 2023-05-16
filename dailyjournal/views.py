@@ -1,17 +1,10 @@
-from django.shortcuts import render
-from django.views import generic, View
+from django.views.generic import CreateView
 from .models import JournalLog
-
-# Create your views here.
-
-
-def home(request):
-    return render(request, 'base.html')
+from .forms import JournalForm
 
 
-def home_page(request):
-    return render(request, 'home_page.html')
+class LogJournalView(CreateView):
+    model = JournalLog
+    form_class = JournalForm
+    template_name = 'dailyjournal/daily_journal.html'
 
-
-def daily_journal(request):
-    return render(request, 'daily_journal.html')
