@@ -20,7 +20,8 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 HOME_TEMPLATES_DIR = os.path.join(BASE_DIR, 'home', 'templates')
-DAILYJOURNAL_TEMPLATES_DIR = os.path.join(BASE_DIR, 'dailyjournal', 'templates')
+DAILYJOURNAL_TEMPLATES_DIR = os.path.join(
+    BASE_DIR, 'dailyjournal', 'templates')
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,6 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
+
 
 ALLOWED_HOSTS = ['8000-saramathews-my-healthy-m-49ma2tzlj8.us2.codeanyapp.com',
                  'myhealthymind-pp4.herokuapp.com', 'localhost']
@@ -44,12 +46,23 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'dailyjournal',
     'home',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
