@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block journalform %} {% load static %}
+{% extends 'base.html' %}
+{% block journalform %}
+{% load static %}
 <!--Jumbotron-->
 <div class="container-fluid p-0 first-container">
     <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
@@ -22,7 +24,7 @@
             <div class="column form-group">
                 <h3>Daily Journal</h3>
             </div>
-            <form method="post">
+            <form method="post" action="{% url 'dailyjournal:log_journal' %}">
                 {% csrf_token %}
                 <div class="column mr-lg-5 form-group date-box">
                     <label for="id_created_on">Date</label>
@@ -35,22 +37,23 @@
             {{ form.content }}
         </div>
 
+        <!--
         <div class="column ml-lg-3 form-group rating-range">
             <label for="range"> Rate your day </label>
             <div>{{ form.daily_rating }}
             </div>
-
-        </div>
-        <div class="form-group d-flex justify-content-end mb-lg-3 mr-lg-3">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="submit" class="btn button btn-form btn-previous">
-                    Submit Journal
-                </button>
-                <button type="button" class="btn button btn-previous">Discard</button>
-            </div>
-        </div>
-        </form>
+-->
     </div>
+    <div class="form-group d-flex justify-content-end mb-lg-3 mr-lg-3">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="submit" class="btn button btn-form btn-previous">
+                Submit Journal
+            </button>
+            <button type="button" class="btn button btn-previous">Discard</button>
+        </div>
+    </div>
+    </form>
+</div>
 </div>
 
 <!--View previous Journals-->
@@ -74,5 +77,6 @@
         </div>
         -->
     </div>
+</div>
 </div>
 {% endblock %}
