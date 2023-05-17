@@ -1,4 +1,5 @@
 from django.views.generic import CreateView
+from django.views.generic.list import ListView
 from django import forms
 from .models import JournalLog
 from .forms import JournalForm
