@@ -6,7 +6,7 @@ from .models import JournalLog
 class JournalForm(forms.ModelForm):
     class Meta:
         model = JournalLog
-        fields = ['created_on', 'content', 'featured_image']
+        fields = ['created_on', 'content']
         ordering = ['-created_on']
         widgets = {
             'created_on': DateInput(attrs={'type': 'date'}),
