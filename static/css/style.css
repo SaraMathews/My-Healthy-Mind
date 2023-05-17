@@ -96,7 +96,6 @@ h6 {
     color: #5C4033;
     border-radius: 5px;
     border: 1px solid #5C4033;
-
 }
 
 .button:hover {
@@ -106,7 +105,6 @@ h6 {
 
 
 /* Footer */
-
 footer {
     height: 70px;
     background-color: #f8eee3;
@@ -128,9 +126,26 @@ footer {
     margin-bottom: 25px;
 }
 
+
+#btn-account-signout {
+    margin-bottom: 35px;
+    margin-right: 60px;
+    width: 100px;
+    font-size: large;
+}
+
+
+#btn-account-signup {
+    margin-bottom: 25px;
+    margin-right: 25px;
+    width: 150px;
+}
+
+
 .acount-heading {
     margin-left: 7%;
     margin-top: 20px;
+
 }
 
 .account-text {

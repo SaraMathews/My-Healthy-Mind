@@ -1,21 +1,34 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+<div class="container account-container d-flex justify-content-center align-items-center">
+    <div class="container-fluid inner-container">
+        <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
-</form>
+            <h1>{% trans "Logout" %}</h1>
+            <p class="account-text">{% trans 'Are you sure you want to Logout?' %}</p>
 
 
-{% endblock %}
+            <div class="row">
+                <div class="col-md-8 mt-3 offset-md-2">
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <div class="text-right">
+                            <button class="btn button" id="btn-account-signout" type="submit">{% trans "Logout" %}
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
