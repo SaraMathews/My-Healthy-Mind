@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+
+class DailyQuote(models.Model):
+    quote = models.TextField()
+    author = models.CharField(max_length=255)
+    date_created = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.quote
+
+    class Meta:
+        ordering = ['-date_created']

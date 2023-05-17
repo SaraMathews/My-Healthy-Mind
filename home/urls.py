@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import home_page
+from .views import QuoteView
 
 
 app_name = 'home'
 
 
 urlpatterns = [
-    path('', home_page, name='home'),
+    path('', QuoteView.as_view(), name='home'),
+
 ]
