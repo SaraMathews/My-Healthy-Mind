@@ -24,7 +24,7 @@
             <div class="column form-group">
                 <h3>Daily Journal</h3>
             </div>
-            <form method="post" action="{% url 'dailyjournal:log_journal' %}">
+            <form method="post" action="{% url 'dailyjournal:log_journal' %}" id="journal-form">
                 {% csrf_token %}
                 <div class="column mr-lg-5 form-group date-box">
                     <label for="id_created_on">Date</label>
@@ -49,7 +49,7 @@
             <button type="submit" class="btn button btn-form btn-previous">
                 Submit Journal
             </button>
-            <button type="button" class="btn button btn-previous">Discard</button>
+            <button type="button" class="btn button btn-previous" id="discard-btn">Discard Journal</button>
         </div>
     </div>
     </form>
