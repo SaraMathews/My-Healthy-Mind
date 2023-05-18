@@ -1,14 +1,30 @@
 {% extends 'base.html' %}
-<!--View previous Journals
-<div class="container outer-container previous-journals-container">
-    <div class="row d-flex align-items-center justify-content-start">
-        <div class="column">
-            <button class="btn button btn-previous" type="button" data-toggle="collapse"
-                data-target="#collapseJournalForm" aria-expanded="false" aria-controls="collapseJournalForm">
-                Daily Journal 'date'
-            </button>
+{% block previousjournalform %}
+
+<div class="container outer-container d-flex justify-content-center align-items-center">
+    <div class="container-fluid inner-container">
+        <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
+            <div class="column form-group">
+                <h3>Daily Journal</h3>
+            </div>
         </div>
+
+        {% for entry in journal_entries %}
+        <div class="journal-entry">
+            <button class="btn button btn-entry" data-toggle="collapse" data-target="#entry-{{ entry.id }}">
+                {{ entry.created_on }} - Click to expand
+            </button>
+            <div id="entry-{{ entry.id }}" class="collapse">
+                <div class="column ml-lg-3 form-group">
+                    <label for="inputContent">Journal Entry:</label>
+                    <input type="text" name="created_on" value="{{ entry.created_on|date:'Y-m-d' }}" readonly>
+                    <p readonly>{{ entry.content }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
     </div>
 </div>
--->
+
 {% endblock %}

@@ -17,3 +17,14 @@ class LogJournalView(CreateView):
         form.save()
         print("Form data saved to the database.")
         return super().form_valid(form)
+
+
+class JournalListView(ListView):
+    model = JournalLog
+    template_name = 'daily_journal.html'
+    context_object_name = 'journal_entries'
+    ordering = ['-created_on']
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
