@@ -1,30 +1,6 @@
 {% extends 'base.html' %}
 {% block pastjournal %}
 {% load static %}
-<!--<div class="container outer-container d-flex justify-content-center align-items-center">
-    <div class="container-fluid inner-container-journal">
-        <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
-            <div class="column form-group">
-                <h3>Daily Journal</h3>
-            </div>
-        </div>
-
-        {% for entry in journal_entries %}
-        <div class="journal-entry">
-            <div class="column ml-lg-3 form-group">
-                <label>Date:</label>
-                <input type="text" class="form-control" value="{{ entry.created_on }}" readonly>
-            </div>
-            <div class="column ml-lg-3 form-group">
-                <label>Journal Entry:</label>
-                <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
-            </div>
-        </div>
-        {% endfor %}
-
-    </div>
-</div> -->
-
 <div class="container outer-container d-flex justify-content-center align-items-center">
     <div class="container-fluid inner-container-journal">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
@@ -46,6 +22,14 @@
                 <div class="column ml-lg-3 form-group">
                     <label>Journal Entry:</label>
                     <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
+                </div>
+                <div class="column ml-lg-3 form-group"> 
+                    <form action="{% url 'dailyjournal:delete_entry' entry.id %}" method="post">
+                       {% csrf_token %}
+                    <button type="submit" class="btn button"> 
+                        Delete Journal
+                    </button>
+                    </form>
                 </div>
             </div>
         </div>

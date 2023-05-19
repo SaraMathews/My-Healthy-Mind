@@ -1,10 +1,11 @@
 from django.views.generic import CreateView
 from django.views.generic.list import ListView
+from django.views import View
 from django import forms
 from .models import JournalLog
 from .forms import JournalForm
 from django.urls import reverse_lazy
-
+from django.shortcuts import get_object_or_404, redirect
 
 class LogJournalView(CreateView):
     model = JournalLog
@@ -28,3 +29,10 @@ class JournalListView(ListView):
     def get_queryset(self):
         queryset = super().get_queryset()
         return queryset.filter(user=self.request.user)
+
+
+class DeleteJournalEntryView(View):
+    def post(self, request, entry_id):
+        entry= get_object_or_404(JournalLog, id=entry_id, user=request.user)
+        entry.delete()
+        return redirect(reverse_lazy('dailyjournal:journal_list'))
