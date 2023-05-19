@@ -6,6 +6,10 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
+<div class="container-fluid p-0 first-container d-flex justify-content-center">
+    <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
+    </div>
+</div>
 <div class="container account-container d-flex justify-content-center align-items-center">
     <div class="container-fluid inner-container">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
@@ -22,7 +26,7 @@
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
                         <div class="text-right">
-                            <button class="btn button" id="btn-account-signout" type="submit">{% trans "Logout" %}
+                            <button class="btn button" id="btn-account-logout" type="submit">{% trans "Logout" %}
                             </button>
                         </div>
                     </form>

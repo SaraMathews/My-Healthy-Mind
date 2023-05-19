@@ -6,11 +6,14 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-
+<div class="container-fluid p-0 first-container d-flex justify-content-center">
+    <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
+    </div>
+</div>
 <div class="container account-container d-flex justify-content-center align-items-center">
     <div class="container-fluid inner-container">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
-            <h1 class="account-heading">{% trans "Signup" %}</h1>
+            <h1>{% trans "Signup" %}</h1>
             {% blocktrans %}
             <p class="account-text">Already have an account? Then please <a href="{{ login_url }}">sign in</a>.</p>
             {% endblocktrans %}
