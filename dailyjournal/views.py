@@ -7,6 +7,7 @@ from .forms import JournalForm
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect
 
+
 class LogJournalView(CreateView):
     model = JournalLog
     form_class = JournalForm
@@ -33,6 +34,6 @@ class JournalListView(ListView):
 
 class DeleteJournalEntryView(View):
     def post(self, request, entry_id):
-        entry= get_object_or_404(JournalLog, id=entry_id, user=request.user)
+        entry = get_object_or_404(JournalLog, id=entry_id, user=request.user)
         entry.delete()
         return redirect(reverse_lazy('dailyjournal:journal_list'))

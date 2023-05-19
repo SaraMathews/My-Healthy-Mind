@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body class="background">
     <main>
         <!-- Logo -->
@@ -70,7 +71,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="bg-img">
+        <div>
             {% block content %}
             {% endblock content %}
 
@@ -93,38 +94,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
-         $(document).ready(function () {
-    $('#discard-btn').click(function () {
-        $('#journal-form').trigger('reset');
-    });
-});
-
-$(document).ready(function () {
-    function showJournalEntries() {
-        let journalEntries = $('.journal-entry');
-        let viewMoreBtn = $('.btn-view-more');
-        journalEntries.hide();
-
-        if (journalEntries.length > 5) {
-            journalEntries.slice(0, 5).show();
-            viewMoreBtn.show();
-        }
-
-        viewMoreBtn.on('click', function(e) {
-            e.preventDefault();
-            let hiddenEntries = journalEntries.filter(':hidden');
-            hiddenEntries.slice(0, 5).slideDown();
-            if (hiddenEntries.length <= 5) {
-                viewMoreBtn.hide();
-            }
+        $(document).ready(function () {
+            $('#discard-btn').click(function () {
+                $('#journal-form').trigger('reset');
+            });
         });
-    }
 
-    showJournalEntries();
-});
+        $(document).ready(function () {
+            function showJournalEntries() {
+                let journalEntries = $('.journal-entry');
+                let viewMoreBtn = $('.btn-view-more');
+                journalEntries.hide();
 
+                if (journalEntries.length > 5) {
+                    journalEntries.slice(0, 5).show();
+                    viewMoreBtn.show();
+                }
 
-    </script> 
+                viewMoreBtn.on('click', function (e) {
+                    e.preventDefault();
+                    let hiddenEntries = journalEntries.filter(':hidden');
+                    hiddenEntries.slice(0, 5).slideDown();
+                    if (hiddenEntries.length <= 5) {
+                        viewMoreBtn.hide();
+                    }
+                });
+            }
+
+            showJournalEntries();
+        });
+    </script>
 </body>
 
 </html>

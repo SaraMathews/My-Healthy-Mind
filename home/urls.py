@@ -7,5 +7,4 @@ app_name = 'home'
 
 urlpatterns = [
     path('', QuoteView.as_view(), name='home'),
-
 ]

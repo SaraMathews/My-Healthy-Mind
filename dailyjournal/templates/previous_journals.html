@@ -23,12 +23,12 @@
                     <label>Journal Entry:</label>
                     <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
                 </div>
-                <div class="column ml-lg-3 form-group"> 
+                <div class="column ml-lg-3 form-group">
                     <form action="{% url 'dailyjournal:delete_entry' entry.id %}" method="post">
-                       {% csrf_token %}
-                    <button type="submit" class="btn button"> 
-                        Delete Journal
-                    </button>
+                        {% csrf_token %}
+                        <button type="submit" class="btn button">
+                            Delete Journal
+                        </button>
                     </form>
                 </div>
             </div>
@@ -43,6 +43,4 @@
 
     </div>
 </div>
-
-
 {% endblock %}
