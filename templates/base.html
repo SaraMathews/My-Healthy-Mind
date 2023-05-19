@@ -36,6 +36,7 @@
             <!-- Navigation with hamburger many -->
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    {% if user.is_authenticated %}
                     <li class="nav-item list-bg ml-auto" id="hamburger-home">
                         <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
                     </li>
@@ -43,6 +44,15 @@
                         <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:log_journal' %}">Daily
                             Journal</a>
                     </li>
+                    <li class="nav-item list-bg ml-auto">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:journal_list' %}">Past
+                            Journals</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item list-bg ml-auto" id="hamburger-home">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <!--Copied from I Think Therefore I Blog walkthrough navbar-->
                 <ul class="navbar-nav ml-auto">
@@ -66,7 +76,10 @@
             {% endblock content %}
 
             {% block journalform %}
-            {% endblock journalform %}
+            {% endblock %}
+            {% block previousjournalform %}
+            {% endblock %}
+
         </div>
 
         <!-- Footer -->

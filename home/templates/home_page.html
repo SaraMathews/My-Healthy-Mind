@@ -31,8 +31,12 @@
                         yourself in self-reflection, express your thoughts,
                         and witness personal growth blossom through the practice of journaling.
                     </p>
+                    {% if user.is_authenticated %}
                     <a href="{% url 'dailyjournal:log_journal' %}" class="btn button mt-auto mx-auto">Log my Daily
                         Journal</a>
+                    {% else %}
+                    <a href="{% url 'account_login' %}" class="btn button mt-auto mx-auto">Log in to Journal</a>
+                    {% endif %}
                 </div>
             </div>
 
@@ -55,58 +59,15 @@
                         a
                         healthier
                         mind. Here, you can view all your previous journal entries, edit them, or delete them.</p>
+                    {% if user.is_authenticated %}
                     <a href="{% url 'dailyjournal:log_journal' %}" class="btn button mt-auto mx-auto">View Past Journals
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Card container 
-    <div class="container container-features">
-        <div class="row justify-content-around">
-            <div class="card card-rounded card-custom">
-                <img src="https://m.media-amazon.com/images/I/518tUTYNbsL._AC_UF1000,1000_QL80_.jpg"
-                    class="card-img-top image" alt="...">
-                <div class="card-body card-body-bottom d-flex flex-column">
-                    <h5 class="card-title">Daily Journal</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the
-                        bulk of the
-                        card's
-                        content.</p>
-                    <a href="{% url 'dailyjournal:log_journal' %}" class="btn button mt-auto mx-auto">Log my Daily
-                        Journal</a>
-                </div>
-            </div>
-
-
-            <div class="card card-rounded card-custom">
-                <img src="https://c8.alamy.com/comp/2N7B2N7/human-brain-with-flowers-and-butterflies-mental-health-and-self-care-concept-positive-thinking-creative-mind-2N7B2N7.jpg"
-                    class="card-img-top image" alt="...">
-                <div class="card-body card-body-bottom">
-                    <h5>Daily Quote</h5>
-                    <p class>{{ quote.quote }}</p>
-                    <p>- {{ quote.author }}</p>
-                </div>
-            </div>
-
-            <div class="card card-rounded card-custom d-none d-lg-block">
-                <img src="https://hbr.org/resources/images/article_assets/2021/02/Feb21_23_1296183274.jpg"
-                    class="card-img-top image" alt="...">
-                <div class="card-body card-body-bottom d-flex flex-column">
-                    <h5 class="card-title">Past Journals</h5>
-                    <p class="card-text">
-                        Revisit your past journals, reflect, and continue your journey towards a healthier
-                        mind. Here, you can view all your previous journal entries, edit them, or delete them.
-                    </p>
-
-                    <a href="#" class="btn button mt-auto mx-auto">View past
+                    {% else %}
+                    <a href="{% url 'account_login' %}" class="btn button mt-auto mx-auto">Log in to view Past
                         Journals</a>
-
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
-    -->
-
     {% endblock %}
