@@ -21,7 +21,7 @@ class LogJournalView(CreateView):
 
 class JournalListView(ListView):
     model = JournalLog
-    template_name = 'daily_journal.html'
+    template_name = 'previous_journals.html'
     context_object_name = 'journal_entries'
     ordering = ['-created_on']
 

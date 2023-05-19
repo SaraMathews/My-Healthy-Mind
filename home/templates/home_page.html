@@ -60,7 +60,8 @@
                         healthier
                         mind. Here, you can view all your previous journal entries, edit them, or delete them.</p>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'dailyjournal:log_journal' %}" class="btn button mt-auto mx-auto">View Past Journals
+                    <a href="{% url 'dailyjournal:journal_list' %}" class="btn button mt-auto mx-auto">View Past
+                        Journals
                     </a>
                     {% else %}
                     <a href="{% url 'account_login' %}" class="btn button mt-auto mx-auto">Log in to view Past

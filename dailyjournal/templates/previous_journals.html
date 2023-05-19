@@ -1,8 +1,32 @@
 {% extends 'base.html' %}
-{% block previousjournalform %}
+{% block pastjournal %}
+{% load static %}
+<!--<div class="container outer-container d-flex justify-content-center align-items-center">
+    <div class="container-fluid inner-container-journal">
+        <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
+            <div class="column form-group">
+                <h3>Daily Journal</h3>
+            </div>
+        </div>
+
+        {% for entry in journal_entries %}
+        <div class="journal-entry">
+            <div class="column ml-lg-3 form-group">
+                <label>Date:</label>
+                <input type="text" class="form-control" value="{{ entry.created_on }}" readonly>
+            </div>
+            <div class="column ml-lg-3 form-group">
+                <label>Journal Entry:</label>
+                <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div> -->
 
 <div class="container outer-container d-flex justify-content-center align-items-center">
-    <div class="container-fluid inner-container">
+    <div class="container-fluid inner-container-journal">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
             <div class="column form-group">
                 <h3>Daily Journal</h3>
@@ -16,15 +40,25 @@
             </button>
             <div id="entry-{{ entry.id }}" class="collapse">
                 <div class="column ml-lg-3 form-group">
-                    <label for="inputContent">Journal Entry:</label>
-                    <input type="text" name="created_on" value="{{ entry.created_on|date:'Y-m-d' }}" readonly>
-                    <p readonly>{{ entry.content }}</p>
+                    <label>Date:</label>
+                    <input type="text" class="form-control" value="{{ entry.created_on }}" readonly>
+                </div>
+                <div class="column ml-lg-3 form-group">
+                    <label>Journal Entry:</label>
+                    <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
                 </div>
             </div>
         </div>
         {% endfor %}
 
+        {% if journal_entries|length > 5 %}
+        <div class="view-more">
+            <a href="#" class="btn button btn-view-more">View More</a>
+        </div>
+        {% endif %}
+
     </div>
 </div>
+
 
 {% endblock %}
