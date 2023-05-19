@@ -4,7 +4,7 @@ body {
 }
 
 .bg-img {
-    background-image: url(/static/images/bg.png);
+    background-image: url('https://res.cloudinary.com/dh8qv66ys/image/upload/v1684484654/static/images/bg.0b5e342d3315.png');
     height: 100%;
     width: 100vw;
     background-size: cover;
