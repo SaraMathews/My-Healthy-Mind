@@ -22,68 +22,67 @@
 </head>
 
 <body>
-  
-        <!-- Logo -->
-        <nav class="navbar navbar-expand-lg navbar-light navbar-big">
-            <a class="navbar-brand logo" href="{% url 'home:home' %}">My Healthy Mind</a>
 
-            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Logo -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-big">
+        <a class="navbar-brand logo" href="{% url 'home:home' %}">My Healthy Mind</a>
 
-            <!-- Navigation with hamburger many -->
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    {% if user.is_authenticated %}
-                    <li class="nav-item list-bg ml-auto" id="hamburger-home">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
-                    </li>
-                    <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:log_journal' %}">Daily
-                            Journal</a>
-                    </li>
-                    <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:journal_list' %}">Past
-                            Journals</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item list-bg ml-auto" id="hamburger-home">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <!--Copied from I Think Therefore I Blog walkthrough navbar-->
-                <ul class="navbar-nav ml-auto">
-                    {% if user.is_authenticated %}
-                    <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item list-bg ml-auto">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    <li class="nav-item list-bg ml-auto" id="signup-home">
-                        <a class="nav-link ul-padding-hamburger" href="{% url 'account_signup' %}">Sign Up</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-          <main>
-            <!--Copied from I Think Therefore I Blog walkthrough messages-->
-               <div class="container-fluid container-messages">
-              <div class="row">
-                  <div class="col-md-4 offset-md-4">
-                {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                    {{ message | safe }}
+        <button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation with hamburger many -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                {% if user.is_authenticated %}
+                <li class="nav-item list-bg ml-auto" id="hamburger-home">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
+                </li>
+                <li class="nav-item list-bg ml-auto">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:log_journal' %}">Daily
+                        Journal</a>
+                </li>
+                <li class="nav-item list-bg ml-auto">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:journal_list' %}">Past
+                        Journals</a>
+                </li>
+                {% else %}
+                <li class="nav-item list-bg ml-auto" id="hamburger-home">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
+                </li>
+                {% endif %}
+            </ul>
+            <!--Copied from I Think Therefore I Blog walkthrough navbar-->
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item list-bg ml-auto">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item list-bg ml-auto">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_login' %}">Login</a>
+                </li>
+                <li class="nav-item list-bg ml-auto" id="signup-home">
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_signup' %}">Sign Up</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!--Copied from I Think Therefore I Blog walkthrough messages-->
+        <div class="container-fluid container-messages">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                        {{ message | safe }}
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-    </div>
         <div class="bg-img">
             {% block content %}
             {% endblock content %}
@@ -94,56 +93,18 @@
             {% block pastjournal %}
             {% endblock pastjournal %}
         </div>
-         </main>
-        <!-- Footer -->
-        <footer class="footer fixed-bottom">
-            <p class="m-0 text-center text-black">Made by Sara Mathews <br>
-                <i class="fab fa-facebook-square ms-3"></i>
-                <i class="fab fa-instagram-square ms-3"></i>
-            </p>
-        </footer>
-   
+    </main>
+    <!-- Footer -->
+    <footer class="footer fixed-bottom">
+        <p class="m-0 text-center text-black">Made by Sara Mathews <br>
+            <i class="fab fa-facebook-square ms-3"></i>
+            <i class="fab fa-instagram-square ms-3"></i>
+        </p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#discard-btn').click(function () {
-                $('#journal-form').trigger('reset');
-            });
-        });
-
-        $(document).ready(function () {
-            function showJournalEntries() {
-                let journalEntries = $('.journal-entry');
-                let viewMoreBtn = $('.btn-view-more');
-                journalEntries.hide();
-
-                if (journalEntries.length > 5) {
-                    journalEntries.slice(0, 5).show();
-                    viewMoreBtn.show();
-                }
-
-                viewMoreBtn.on('click', function (e) {
-                    e.preventDefault();
-                    let hiddenEntries = journalEntries.filter(':hidden');
-                    hiddenEntries.slice(0, 5).slideDown();
-                    if (hiddenEntries.length <= 5) {
-                        viewMoreBtn.hide();
-                    }
-                });
-            }
-
-            showJournalEntries();
-        });
-
-//Copied from I Think Therefore I Blog walkthrough messages
-         setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2500);
-    </script>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 
 </html>
