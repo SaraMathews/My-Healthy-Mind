@@ -5,7 +5,7 @@ from django import forms
 from .models import JournalLog
 from .forms import JournalForm
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib import messages
 
 
@@ -19,8 +19,8 @@ class LogJournalView(CreateView):
         form.instance.user = self.request.user
         form.save()
         messages.add_message(
-                self.request, messages.SUCCESS, "Your Daily Journal has been logged."
-            )
+            self.request, messages.SUCCESS, "Your Daily Journal has been logged."
+        )
         return super().form_valid(form)
 
 
@@ -38,9 +38,13 @@ class JournalListView(ListView):
 class DeleteJournalEntryView(View):
     def post(self, request, entry_id):
         entry = get_object_or_404(JournalLog, id=entry_id, user=request.user)
-        entry.delete()
-        messages.add_message(
-            self.request, messages.SUCCESS, "Your Daily Journal entry has been deleted."
-            )
-        return redirect(reverse_lazy('dailyjournal:journal_list'))
-     
+
+        confirm_deletion = request.POST.get('confirm-deletion')
+        if confirm_deletion:
+            entry.delete()
+            messages.success(
+                request, "Your Daily Journal entry has been deleted.")
+        else:
+            messages.warning(
+                request, "You cancelled, so no Daily Journal entry was deleted.")
+            return redirect(reverse_lazy('dailyjournal:journal_list'))
