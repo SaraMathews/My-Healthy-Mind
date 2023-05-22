@@ -5,6 +5,7 @@ $(document).ready(function () {
     });
 });
 
+// Past Journals 
 $(document).ready(function () {
     function showJournalEntries() {
         let journalEntries = $('.journal-entry');
@@ -40,3 +41,9 @@ setTimeout(function () {
     let alert = new bootstrap.Alert(messages);
     alert.close();
 }, 2500);
+
+//Deletion of Journals
+$(document).ready(function () {
+    let deleteModal = new bootstrap.Modal(document.getElementById("confirmModalDeletion{{ entry.id }}"));
+    deleteModal.show();
+});
