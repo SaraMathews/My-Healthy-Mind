@@ -5,16 +5,14 @@
 <div class="container-fluid p-0 first-container">
     <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
         <div class="container">
-            <h1 class="display-4">Log your Daily Journal</h1>
+            <h1 class="display-4">Your Personal Journal</h1>
             <p class="lead">
                 Here on the My Healthy Mind website we provide you with a safe space to
                 log your daily journal, allowing you to keep track of your thoughts and
-                feelings. We strongly believe that maintaining a positive mindset and
-                prioritizing your well-being is vital for a healthy mind, and we're here
-                to support you in achieving that. Our user-friendly journaling system
-                enables you to reflect on your experiences and emotions, set goals, and
-                monitor your progress as you work towards a happier and healthier you.
-            </p>
+                feelings. We believe that maintaining a positive mindset, and
+                prioritizing your well-being is vital for a healthy mind. Our user-friendly journaling system
+                allows you to reflect on your experiences and emotions and monitor your progress as you
+                strive for a happier and healthier version of yourself.
         </div>
     </div>
 </div>
@@ -24,22 +22,25 @@
             <div class="column form-group">
                 <h3>Daily Journal</h3>
             </div>
+            <!--Journal Form-->
             <form method="post" action="{% url 'dailyjournal:log_journal' %}" id="journal-form">
                 {% csrf_token %}
                 <div class="column mr-lg-5 form-group date-box">
-                    <label for="id_created_on">Date</label>
+                    <label for="id_created_on">Date:</label>
                     {{ form.created_on }}
                 </div>
         </div>
         <div class="column ml-lg-3 form-group">
-            <label for="inputContent"> </label>
+            <label for="inputContent">Your Journal Entry:</label>
             {{ form.content }}
         </div>
         <div class="form-group d-flex justify-content-end mb-lg-3 mr-lg-3">
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group" aria-label="Journal actions">
+                <!--Submit btn to submit the Journal-->
                 <button type="submit" class="btn button btn-form btn-previous">
                     Submit Journal
                 </button>
+                <!--Discard btn to discard the started Journal-->
                 <button type="button" class="btn button btn-previous" id="discard-btn">Discard Journal</button>
             </div>
         </div>

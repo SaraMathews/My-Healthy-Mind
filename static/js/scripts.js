@@ -41,9 +41,3 @@ setTimeout(function () {
     let alert = new bootstrap.Alert(messages);
     alert.close();
 }, 2500);
-
-//Deletion of Journals
-$(document).ready(function () {
-    let deleteModal = new bootstrap.Modal(document.getElementById("confirmModalDeletion{{ entry.id }}"));
-    deleteModal.show();
-});

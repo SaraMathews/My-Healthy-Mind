@@ -1,4 +1,4 @@
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DeleteView
 from django.views.generic.list import ListView
 from django.views import View
 from django import forms
@@ -7,6 +7,9 @@ from .forms import JournalForm
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib import messages
+from django.contrib.auth.mixins import (
+    UserPassesTestMixin, LoginRequiredMixin
+)
 
 
 class LogJournalView(CreateView):
@@ -17,7 +20,6 @@ class LogJournalView(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        form.save()
         messages.add_message(
             self.request, messages.SUCCESS, "Your Daily Journal has been logged."
         )
@@ -35,16 +37,10 @@ class JournalListView(ListView):
         return queryset.filter(user=self.request.user)
 
 
-class DeleteJournalEntryView(View):
-    def post(self, request, entry_id):
-        entry = get_object_or_404(JournalLog, id=entry_id, user=request.user)
+class DeleteJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = JournalLog
+    success_url = reverse_lazy('dailyjournal:journal_list')
+    template_name = 'journallog_confirm_delete.html'
 
-        confirm_deletion = request.POST.get('confirm-deletion')
-        if confirm_deletion:
-            entry.delete()
-            messages.success(
-                request, "Your Daily Journal entry has been deleted.")
-        else:
-            messages.warning(
-                request, "You cancelled, so no Daily Journal entry was deleted.")
-            return redirect(reverse_lazy('dailyjournal:journal_list'))
+    def test_func(self):
+        return self.request.user == self.get_object().user
