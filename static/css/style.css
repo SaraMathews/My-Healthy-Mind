@@ -128,10 +128,20 @@ h6 {
 /* Footer */
 footer {
     background-color: #f8eee3;
-    padding-top: 10px;
-    height: 70px;
-    margin-top: -70px;
+    height: 85px;
+    margin-top: -85px;
     border-top: 0.5px solid #5C4033;
+}
+
+.footer-p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.social-media {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
 }
 
 /* user authentication */
