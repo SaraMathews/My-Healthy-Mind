@@ -12,11 +12,11 @@ created and the content.
 
 class JournalLog(models.Model):
     RATING_OPTIONS = (
-        ('Awful', 'Awful'),
-        ('Bad', 'Bad'),
-        ('Okay', 'Okay'),
-        ('Good', 'Good'),
         ('Amazing', 'Amazing'),
+        ('Good', 'Good'),
+        ('Okay', 'Okay'),
+        ('Bad', 'Bad'),
+        ('Awful', 'Awful'),
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

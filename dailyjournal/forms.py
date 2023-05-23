@@ -10,18 +10,19 @@ their journal.
 """
 
 RATING_OPTIONS = (
-    ('Awful', 'Awful'),
-    ('Bad', 'Bad'),
-    ('Okay', 'Okay'),
-    ('Good', 'Good'),
     ('Amazing', 'Amazing'),
+    ('Good', 'Good'),
+    ('Okay', 'Okay'),
+    ('Bad', 'Bad'),
+    ('Awful', 'Awful'),
+    
 )
 
 
 class JournalForm(forms.ModelForm):
 
     rating = forms.CharField(
-        max_length=20, widget=forms.Select(choices=RATING_OPTIONS))
+        max_length=20, widget=forms.Select(choices=RATING_OPTIONS), initial='Okay')
     image = CloudinaryFileField(required=False)
 
     class Meta:
