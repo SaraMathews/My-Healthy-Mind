@@ -200,6 +200,13 @@ footer {
     border: 2px solid #d6c0a8;
 }
 
+.journal-img {
+    width: 250px;
+    height: 250px;
+    overflow: scroll;
+
+}
+
 /* Previous Journals container */
 .view-more {
     text-align: center;

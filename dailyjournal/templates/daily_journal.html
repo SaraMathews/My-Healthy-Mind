@@ -23,7 +23,8 @@
                 <h3>Daily Journal</h3>
             </div>
             <!--Journal Form-->
-            <form method="post" action="{% url 'dailyjournal:log_journal' %}" id="journal-form">
+            <form method="post" action="{% url 'dailyjournal:log_journal' %}" id="journal-form"
+                enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="column mr-lg-5 form-group date-box">
                     <label for="id_created_on">Date:</label>
@@ -34,6 +35,15 @@
             <label for="inputContent">Your Journal Entry:</label>
             {{ form.content }}
         </div>
+        <div class="column form-group">
+            <label for="id_rating">Rate your day:</label>
+            {{ form.rating }}
+        </div>
+        <div class="column form-group">
+            <label for="id_image">Capture the day with an image:</label>
+            {{ form.image }}
+        </div>
+
         <div class="form-group d-flex justify-content-end mb-lg-3 mr-lg-3">
             <div class="btn-group" role="group" aria-label="Journal actions">
                 <!--Submit btn to submit the Journal-->

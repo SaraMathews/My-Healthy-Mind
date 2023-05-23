@@ -26,8 +26,9 @@ class LogJournalView(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        form.instance.image = self.request.FILES.get('image')
         messages.add_message(
-            self.request, messages.SUCCESS, "Your Daily Journal has been logged."
+            self.request, messages.SUCCESS, "Your Daily Journal has been submitted."
         )
         return super().form_valid(form)
 

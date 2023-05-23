@@ -23,6 +23,17 @@
                     <label>Journal Entry:</label>
                     <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
                 </div>
+                <div class="column form-group">
+                    <label>Rating:</label>
+                    <input type="text" class="form-control" value="{{ entry.rating }}" readonly>
+                </div>
+                <div class="column form-group">
+                    <label>Image of the day:</label> <br>
+                    {% if entry.image %}
+                    <img src="{{ entry.image.url }}" class="img-fluid" alt="Image of the day">
+                    {% endif %}
+
+                </div>
                 <div class="column ml-lg-3 form-group">
                     <form action="{% url 'dailyjournal:delete_entry' entry.id %}" method="post">
                         {% csrf_token %}
