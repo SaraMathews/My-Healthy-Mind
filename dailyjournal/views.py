@@ -12,6 +12,12 @@ from django.contrib.auth.mixins import (
 )
 
 
+"""
+View for logging a Daily Journal.
+Allows the user to create a new journal entry.
+"""
+
+
 class LogJournalView(CreateView):
     model = JournalLog
     form_class = JournalForm
@@ -26,6 +32,12 @@ class LogJournalView(CreateView):
         return super().form_valid(form)
 
 
+"""
+View for displaying a list of past journals
+Displays a list of past journals for the logged in user.
+"""
+
+
 class JournalListView(ListView):
     model = JournalLog
     template_name = 'previous_journals.html'
@@ -37,20 +49,29 @@ class JournalListView(ListView):
         return queryset.filter(user=self.request.user)
 
 
+"""
+View for deleting a journal
+Allows the user to delete their own journals.
+"""
+
+
 class DeleteJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = JournalLog
     success_url = reverse_lazy('dailyjournal:journal_list')
     template_name = 'journallog_confirm_delete.html'
 
+    # Checks if the user passes the test to delete the journal
     def test_func(self):
         return self.request.user == self.get_object().user
 
+    # Returns the context data that's used in the template rendering
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         entry = self.get_object()
         context['entry'] = entry
         return context
 
+    # Deletes the journal and displays a success message
     def delete(self, request, *args, **kwargs):
         entry = self.get_object()
         response = super().delete(request, *args, **kwargs)

@@ -4,6 +4,7 @@
 {% block title %}Delete Journal {{ entry.id }}{% endblock %}
 
 {% block content %}
+<!--Delete Journal confirmation-->
 <div class="container outer-container d-flex justify-content-center align-items-center">
     <div class="container-fluid inner-container-journal">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
@@ -11,8 +12,12 @@
             <div>
                 <form method="post" class="text-center pr-5 mb-3">
                     {% csrf_token %}
-                    <p>Are you sure you want to delete the Journal for {{ entry.created_on }}?</p>
-                    <input type="submit" value="Confirm" class="btn btn-primary button">
+                    <p id="confirmation-message">Are you sure you want to delete the Journal for {{ entry.created_on }}?
+                    </p>
+                    <div>
+                        <input type="submit" value="Confirm" class="btn button">
+                        <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
+                    </div>
                 </form>
             </div>
         </div>

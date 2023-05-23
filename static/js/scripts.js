@@ -41,3 +41,8 @@ setTimeout(function () {
     let alert = new bootstrap.Alert(messages);
     alert.close();
 }, 2500);
+
+// Redirects the user back to Past Journals page when cancelling a deletion
+function cancelDelete() {
+    window.history.back();
+}

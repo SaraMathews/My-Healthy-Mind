@@ -45,14 +45,3 @@
 </div>
 
 {% endblock %}
-
-{% block postload_js %}
-{{ block.super }}
-<script>
-    //Deletion of Journals
-    $(document).ready(function () {
-        let deleteModal = new bootstrap.Modal(document.getElementById("confirmModalDeletion{{ entry.id }}"));
-        deleteModal.show();
-    });
-</script>
-{% endblock %}
