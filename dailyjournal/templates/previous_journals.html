@@ -8,7 +8,7 @@
                 <h3>Past Journals</h3>
             </div>
         </div>
-
+        <!--Iterates through the user's logged journals-->
         {% for entry in journal_entries %}
         <div class="journal-entry">
             <button class="btn button btn-entry" data-toggle="collapse" data-target="#entry-{{ entry.id }}">
@@ -34,7 +34,7 @@
             </div>
         </div>
         {% endfor %}
-
+        <!--View more button is displayed if there are more than 5 journals-->
         {% if journal_entries|length > 5 %}
         <div class="view-more">
             <a href="#" class="btn button btn-view-more">View More</a>

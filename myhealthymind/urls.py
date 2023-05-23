@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+"""
+Defines the URL patterns for the My Healthy Mind project, mapping specific 
+routes to their respective views or app URLs.
+"""
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dailyjournal/', include('dailyjournal.urls')),

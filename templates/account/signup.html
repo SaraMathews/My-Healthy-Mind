@@ -10,6 +10,7 @@
     <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
     </div>
 </div>
+<!-- Container for the signup form -->
 <div class="container account-container d-flex justify-content-center align-items-center">
     <div class="container-fluid inner-container">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
@@ -18,7 +19,6 @@
             <p class="account-text">Already have an account? Then please <a href="{{ login_url }}">sign in</a>.</p>
             {% endblocktrans %}
         </div>
-
         <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
                 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">

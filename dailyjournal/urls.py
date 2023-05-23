@@ -1,6 +1,9 @@
 from django.urls import path
 from .views import LogJournalView, JournalListView, DeleteJournalEntryView
 
+"""
+Defines the URL patterns for all the journal-related features.
+"""
 app_name = 'dailyjournal'
 
 urlpatterns = [

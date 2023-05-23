@@ -1,5 +1,11 @@
 from django.db import models
 
+"""
+Describes the Daily Quote
+Includes fields for the context of the quote, the author of the quote and the 
+date it was created. 
+"""
+
 
 class DailyQuote(models.Model):
     quote = models.TextField()
