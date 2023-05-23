@@ -44,3 +44,17 @@ class DeleteJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, DeleteView
 
     def test_func(self):
         return self.request.user == self.get_object().user
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        entry = self.get_object()
+        context['entry'] = entry
+        return context
+
+    def delete(self, request, *args, **kwargs):
+        entry = self.get_object()
+        response = super().delete(request, *args, **kwargs)
+        formatted_date = entry.created_on.strftime("%B %d, %Y")
+        messages.success(
+            request, f"Your Journal for {formatted_date} has been deleted.")
+        return response
