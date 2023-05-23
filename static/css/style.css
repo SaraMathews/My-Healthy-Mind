@@ -121,6 +121,10 @@ h6 {
     background-color: #F3DED4;
 }
 
+.btn-red:hover {
+    background-color: #ffa09d;
+}
+
 /* Footer */
 footer {
     background-color: #f8eee3;
@@ -202,6 +206,8 @@ footer {
     margin-top: 15px;
 }
 
+
+
 /* Confirmation on action messages */
 .container-messages {
     background-color: #f8eee3;
@@ -239,5 +245,9 @@ footer {
 
     #btn-account {
         font-size: large;
+    }
+
+    .btn-entry {
+        width: 33%;
     }
 }

@@ -2,7 +2,7 @@
 {% block pastjournal %}
 {% load static %}
 <div class="container outer-container d-flex justify-content-center align-items-center">
-    <div class="container-fluid inner-container-journal">
+    <div class="container-fluid inner-container-journal pb-3">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
             <div class="column form-group">
                 <h3>Past Journals</h3>
@@ -10,7 +10,7 @@
         </div>
         <!--Iterates through the user's logged journals-->
         {% for entry in journal_entries %}
-        <div class="journal-entry">
+        <div class="pb-2">
             <button class="btn button btn-entry" data-toggle="collapse" data-target="#entry-{{ entry.id }}">
                 {{ entry.created_on }} - Click to expand
             </button>
@@ -26,8 +26,7 @@
                 <div class="column ml-lg-3 form-group">
                     <form action="{% url 'dailyjournal:delete_entry' entry.id %}" method="post">
                         {% csrf_token %}
-                        <a href="{% url 'dailyjournal:delete_entry' entry.pk %}"
-                            class="btn button btn-primary">Delete</a>
+                        <a href="{% url 'dailyjournal:delete_entry' entry.pk %}" class="btn button btn-red">Delete</a>
 
                     </form>
                 </div>

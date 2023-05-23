@@ -12,7 +12,11 @@
             <div>
                 <form method="post" class="text-center pr-5 mb-3">
                     {% csrf_token %}
-                    <p id="confirmation-message">Are you sure you want to delete the Journal for {{ entry.created_on }}?
+                    <p id="confirmation-message"><strong>Are you sure you want to delete the Journal
+                            for {{ entry.created_on }}?</strong>
+                        <br>
+                        Warning: Once deleted, the journal cannot be
+                        recovered.
                     </p>
                     <div>
                         <input type="submit" value="Confirm" class="btn button">
