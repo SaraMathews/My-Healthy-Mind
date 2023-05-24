@@ -191,6 +191,7 @@ footer {
 .outer-container {
     border-radius: 10px;
     min-height: calc(100vh - 55.5px);
+    padding-bottom: 120px;
 }
 
 .inner-container-journal {
@@ -210,8 +211,8 @@ footer {
 }
 
 .journal-img {
-    width: 250px;
-    height: 250px;
+    max-width: 550px;
+    max-height: 550px;
     overflow: scroll;
 }
 
