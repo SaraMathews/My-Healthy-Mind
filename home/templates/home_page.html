@@ -9,11 +9,12 @@
                 daily
                 journal,
                 allowing you to keep track of your thoughts and
-                feelings. We strongly believe that maintaining a positive mindset and prioritizing your
+                feelings, rate your day, and even document it with a photo. We strongly believe that maintaining a
+                positive mindset and prioritizing your
                 well-being is vital for a
-                healthy mind, and we're here to support you in achieving that. Our user-friendly journaling
-                system enables you to
-                reflect on your experiences and emotions, set goals, and monitor your progress as you work
+                healthy mind. Our user-friendly journaling
+                platform allows you to
+                reflect on your experiences and emotions, and monitor your progress as you work
                 towards a happier and
                 healthier you.</p>
         </div>
@@ -27,9 +28,10 @@
                     <h5 class="card-title">Daily Journal</h5>
                 </div>
                 <div class="card-body card-body-bottom d-flex flex-column justify-content-center align-items-center">
-                    <p class="card-text my-auto">Discover the wonders of daily journaling for a healthy mind. Immerse
-                        yourself in self-reflection, express your thoughts,
-                        and witness personal growth blossom through the practice of journaling.
+                    <p class="card-text my-auto">Uncover the joy of daily journaling for a healthy mind. Express your
+                        thoughts and experience personal growth as you
+                        embrace the practise of journaling.
+
                     </p>
                     {% if user.is_authenticated %}
                     <a href="{% url 'dailyjournal:log_journal' %}" class="btn button mt-auto mx-auto">Log my Daily
@@ -58,7 +60,7 @@
                     <p class="card-text my-auto">Revisit your past journals, reflect, and continue your journey towards
                         a
                         healthier
-                        mind. Here, you can view all your previous journal entries, edit them, or delete them.</p>
+                        mind. Here, you can view all your past journal entries, edit them, or delete them.</p>
                     {% if user.is_authenticated %}
                     <a href="{% url 'dailyjournal:journal_list' %}" class="btn button mt-auto mx-auto">View Past
                         Journals

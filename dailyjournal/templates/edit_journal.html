@@ -15,17 +15,13 @@
         <form method="post" action="" id="journal-form" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <div class="column ml-lg-3 form-group">
-                <label for="id_image">Photo of the day:</label><br>
+            <div class="column ml-lg-3 form-group journal-img">
                 {% if object.image %}
-                <img src="{{ object.image.url }}" class="img-fluid" alt="Image of the day">
-                {% else %}
-                <p>You haven't uploaded a photo of the day yet.</p>
-                <input type="file" name="image">
+                <img src="{{ object.image.url }}" class="img-fluid" alt="Photo of the day">
                 {% endif %}
             </div>
-            <div class="column ml-lg-3 form-group">
-                <input type="submit" value="Save changes" class="btn button">
+            <div class="column ml-lg-3 form-group d-flex justify-content-end">
+                <input type="submit" value="Save changes" class="btn button btn-edit">
                 <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
             </div>
         </form>
