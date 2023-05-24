@@ -28,7 +28,9 @@ class LogJournalView(CreateView):
         form.instance.user = self.request.user
         form.instance.image = self.request.FILES.get('image')
         messages.add_message(
-            self.request, messages.SUCCESS, "Your Daily Journal has been submitted."
+            self.request,
+            messages.SUCCESS,
+            "Your Daily Journal has been submitted."
         )
         return super().form_valid(form)
 
@@ -56,7 +58,9 @@ Allows the user to delete their own journals.
 """
 
 
-class DeleteJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class DeleteJournalEntryView(
+    LoginRequiredMixin, UserPassesTestMixin, DeleteView
+):
     model = JournalLog
     success_url = reverse_lazy('dailyjournal:journal_list')
     template_name = 'journallog_confirm_delete.html'

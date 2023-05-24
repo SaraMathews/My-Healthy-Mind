@@ -68,6 +68,7 @@ h6 {
     margin-left: 10px;
 }
 
+/*Home Page */
 /* First container with text */
 .jumbotron {
     background-color: #f8eee3;
@@ -78,7 +79,6 @@ h6 {
 .container-features {
     padding-bottom: 100px;
     min-height: calc(100vh - 55.5px);
-
 }
 
 .card-rounded {
@@ -144,7 +144,7 @@ footer {
     margin-right: 10px;
 }
 
-/* user authentication */
+/* User authentication */
 .account-container {
     border-radius: 10px;
     height: 450px;
@@ -178,7 +178,6 @@ footer {
     margin-top: 20px;
 }
 
-
 .inner-container {
     background-color: #f8eee3;
     background-size: cover;
@@ -187,7 +186,7 @@ footer {
     border: 3px solid #5C4033;
 }
 
-/* daily_journal.html */
+/* Daily Journal Page */
 /* Journal form */
 .outer-container {
     border-radius: 10px;
@@ -214,16 +213,13 @@ footer {
     width: 250px;
     height: 250px;
     overflow: scroll;
-
 }
 
-/* Previous Journals container */
+/* Past Journals Page */
 .view-more {
     text-align: center;
     margin-top: 15px;
 }
-
-
 
 /* Confirmation on action messages */
 .container-messages {
