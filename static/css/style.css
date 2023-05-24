@@ -128,19 +128,20 @@ h6 {
 /* Footer */
 footer {
     background-color: #f8eee3;
-    height: 85px;
-    margin-top: -85px;
+    height: 70px;
+    margin-top: -70px;
     border-top: 0.5px solid #5C4033;
 }
 
 .footer-p {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: small;
 }
 
 .social-media {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
 }
 
@@ -191,7 +192,7 @@ footer {
 .outer-container {
     border-radius: 10px;
     min-height: calc(100vh - 55.5px);
-    padding-bottom: 120px;
+    padding-bottom: 150px;
 }
 
 .inner-container-journal {
