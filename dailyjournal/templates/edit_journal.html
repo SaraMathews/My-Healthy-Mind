@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Edit Journal {{ object.id }}{% endblock %}
+
+{% block content %}
+<div class="container outer-container d-flex justify-content-center align-items-center pt-5">
+    <div class="container-fluid inner-container-journal pb-3">
+        <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
+            <div class="column form-group">
+                <h3>Past Journals</h3>
+            </div>
+        </div>
+        <!--Edit Journal Form-->
+        <form method="post" action="" id="journal-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="column ml-lg-3 form-group">
+                <label for="id_image">Photo of the day:</label><br>
+                {% if object.image %}
+                <img src="{{ object.image.url }}" class="img-fluid" alt="Image of the day">
+                {% else %}
+                <p>You haven't uploaded a photo of the day yet.</p>
+                <input type="file" name="image">
+                {% endif %}
+            </div>
+            <div class="column ml-lg-3 form-group">
+                <input type="submit" value="Save changes" class="btn button">
+                <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    // Redirects the user back to Past Journals page when ca a deletion
+    function cancelDelete() {
+        window.history.back();
+    }
+</script>
+
+{% endblock %}

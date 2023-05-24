@@ -118,6 +118,7 @@ h6 {
     color: #5C4033;
     border-radius: 5px;
     border: 1px solid #5C4033;
+
 }
 
 .button:hover {
@@ -226,6 +227,11 @@ footer {
 .view-more {
     text-align: center;
     margin-top: 15px;
+}
+
+.btn-edit,
+.btn-delete {
+    margin-right: 10px;
 }
 
 /* Confirmation on action messages */

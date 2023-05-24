@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, DeleteView
+from django.views.generic import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.views import View
 from django import forms
@@ -84,3 +84,31 @@ class DeleteJournalEntryView(
         messages.success(
             request, f"Your Journal for {formatted_date} has been deleted.")
         return response
+
+
+"""
+View for editing a journal
+Allows the user to edit their own journals.
+"""
+
+
+class EditJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = JournalLog
+    form_class = JournalForm
+    template_name = 'edit_journal.html'
+    success_url = reverse_lazy('dailyjournal:journal_list')
+
+    # Checks if the user passes the test to edit the journal
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+    # Gets the journal entry based on the given entry_id
+    def get_object(self, queryset=None):
+        entry_id = self.kwargs.get('entry_id')
+        return get_object_or_404(JournalLog, id=entry_id)
+
+    def form_valid(self, form):
+        formatted_date = self.object.created_on.strftime("%B %d, %Y")
+        messages.success(
+            self.request, f"Your Journal for {formatted_date} has been updated.")
+        return super().form_valid(form)
