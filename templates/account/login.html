@@ -14,9 +14,9 @@
 <div class="container account-container">
     <div class="container-fluid inner-container">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
-            <h1 class="acount-heading">{% trans "Login" %}</h1>
-            <p class="account-text">{% blocktrans %}Welcome to My Healthy Mind! To begin recording your Daily Journal
-                entries, please log
+            <h1 class="acount-heading">{% trans "Sign in" %}</h1>
+            <p class="account-text">{% blocktrans %}Welcome to My Healthy Mind! To begin recording your Daily Journal,
+                please sign
                 in.
                 If you don't have an account yet, you can
                 <a href="{{ signup_url }}">Sign up</a> to get started. {% endblocktrans %}
@@ -31,7 +31,7 @@
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
                     <div class="text-right">
-                        <button class="btn button" id="btn-account" type="submit">{% trans "Log In" %}</button>
+                        <button class="btn button" id="btn-account" type="submit">{% trans "Sign in" %}</button>
                     </div>
                 </form>
 

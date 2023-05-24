@@ -57,11 +57,11 @@
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
                 <li class="nav-item list-bg ml-auto">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_logout' %}">Sign out</a>
                 </li>
                 {% else %}
                 <li class="nav-item list-bg ml-auto">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_login' %}">Login</a>
+                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_login' %}">Sign in</a>
                 </li>
                 <li class="nav-item list-bg ml-auto" id="signup-home">
                     <a class="nav-link ul-padding-hamburger" href="{% url 'account_signup' %}">Sign Up</a>
