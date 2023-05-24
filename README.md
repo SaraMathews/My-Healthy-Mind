@@ -10,12 +10,13 @@
 
 ### Mind Map
 
-![Mind Map](docs/mindmap.jpeg)
+![Mind Map](docs/mindmap.png)
 
 ### Wireframe
 
-![Home Page wireframe](docs/wireframe1.png)
-![Daily Journal wireframe](docs/wireframe2.png)
+![Home Page wireframe](docs/wireframe_homepage.png)
+![Daily Journal wireframe](docs/wireframe_dailyjournal.png)
+![Past Journals wireframe](docs/wireframe_pastjournals.png)
 
 ## Features
 
@@ -25,30 +26,35 @@ The Home Page offers visitors a welcoming text and an image capturing the purpos
 
 ### User autentication
 
-To be able to log a Daily Journal with the supporting features, the visitor of the webiste must first sign up. They can then sign in and sign out at any time. This feature ensures that no other than the logged in user can create, view, edit and delete journals.
+To be able to log a Daily Journal with the supporting features, the visitor of the webiste must first sign up. They can then sign in and sign out at any time. This feature of user authentication ensures secure access to the website's features. Only registered users can sign in, log a journal, view past journals, edit and delete their journals.
 
-### Daily Quotes
+### Features Cards
 
-A daily quote is displayed on the homepage to inspire and motivate both users and visitors, with new quotes added and updated regularly by the admin.
+### Daily Quotes Card
 
-### Admin site
+A daily quote is displayed on the homepage to inspire and motivate both users and visitors, with new quotes added and updated regularly by the admin. This feature offers both users and visitors a positive and motivational experience while on the website.
 
-### Log Daily journal
+### Log Daily Journal
 
-This features allows the users to record their daily thoughts, emotions and happenings of the day. They can also rate their day on a scale from Terrible to Amazing.
+This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and upload a photo, the user can create a more personalised and memorable journal.
 
-### View previously logged journal entries
+### View Past Journal entries
 
-This feature lets the user view their past journal entries as a list, in a convenient way. This allows the user to look back and reflect on previos days thoughts and feelings.
+This feature lets the user view their past journal entries as a list, in a convenient way. This allows the user to look back and reflect on previous days thoughts and feelings.
 
-### Edit previously logged journal entries
+### Edit Past Journal entries
 
-On each logged journal entry there is an edit button that lets the user edit the logged journal entry. This enables the user to make changes or correct mistakes.
+On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
 
-### Delete previously logged journal entries
+### Delete Past Journal entries
 
-On each logged journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
-It gives the user the flexibility to delete entries that no longer serve a purpose or that they would rather not have on record.
+On each journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
+It gives the user the flexibility to delete journals that no longer serve a purpose or that they would rather not have on record.
+The user is taken to a confirmation page where they have to confirm they want to delete the journal, or they have the option to cancel the initiated deletion.
+
+### Admin page
+
+While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete Daily Quotes and handle management regarding the Journal features, and users.
 
 ## User Stories
 
@@ -67,16 +73,18 @@ It gives the user the flexibility to delete entries that no longer serve a purpo
 ### Unfixed bugs
 
 ## Technologies
-Django, gunicorn(server heroku), 
+
+Django, gunicorn(server heroku),
 supporting libraries - dj_database_url, psycopg2
 cloudinary
+
 ### Languages
 
 ### Frameworks and libraries
 
 ### Databases
-PostgreSQL
 
+PostgreSQL
 
 ## Deployment
 
