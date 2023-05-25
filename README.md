@@ -2,20 +2,30 @@
 
 ## Description
 
+My Healthy Mind is an online journaling platform where users can log their daily thoughts, reflect on their experiences and work towards a happier healthier self.
+The core functionality of My Healthy Mind revolves around journaling. In the journal, the user can write down all their thoughts and feelings. Beyond that, they can rate their day on a spectrum ranging from "Awful" to "Amazing, and they can also upload a photo to capture their day.
+When users visit the website's home page, they are greeted with inspirational quotes that updates every time the website is reloaded. This feature aims to fill the user's experience with positivity and motivation.
+
 ### Who is the user?
 
+My Healthy Mind is aimed at people who want to prioritize their mental well-being and that seek a platform for daily journaling to exprees their thoughts and feelings.
+
 ### What is the purpose?
+
+The purpose of My Healthy Mind is to provide users with an online space to log their daily journal, and to be able to reflect on past journals. With a user-friendly interface and features like daily rating and uploading photos, the goal is to to promote mental wellness and a positive mindset.
 
 ## UX and design
 
 ### Mind Map
 
+The Mind Map was made using Lucidchart.
 ![Mind Map](docs/mindmap.png)
 
 ### Wireframe
 
+The Wireframe was made using Balsamiq Wireframes.
 ![Home Page wireframe](docs/wireframe_homepage.png)
-![Daily Journal wireframe](docs/wireframe_dailyjournal.png)
+![Daily Jo wireframe](docs/wireframe_dailyjournal.png)
 ![Past Journals wireframe](docs/wireframe_pastjournals.png)
 
 ## Features
