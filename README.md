@@ -24,6 +24,7 @@ The Mind Map was made using Lucidchart.
 ### Wireframe
 
 The Wireframe was made using Balsamiq Wireframes.
+
 ![Home Page wireframe](docs/wireframe_homepage.png)
 ![Daily Jo wireframe](docs/wireframe_dailyjournal.png)
 ![Past Journals wireframe](docs/wireframe_pastjournals.png)
@@ -34,39 +35,67 @@ The Wireframe was made using Balsamiq Wireframes.
 
 The Home Page offers visitors a welcoming text and an image capturing the purpose of the website. A navbar is displayed on the top of the page for easy navigation between the websites different pages. A footer is displayed on the bottom of the page.
 
+![Homepage with navbar visitor](docs/header_navbar.png)
+![Navbar user](docs/navbar_loggedin.png)
+
 ### User autentication
 
 To be able to log a Daily Journal with the supporting features, the visitor of the webiste must first sign up. They can then sign in and sign out at any time. This feature of user authentication ensures secure access to the website's features. Only registered users can sign in, log a journal, view past journals, edit and delete their journals.
+When the user has either signed up, signed in or signed out, a success message will appear letting the user know the action was successfull.
 
-### Features Cards
+![Sign up](docs/signup.png)
+![Sign in](docs/signin.png)
+![Sign out](docs/signout.png)
 
-### Daily Quotes Card
+### Features and Daily Quotes Cards
 
-A daily quote is displayed on the homepage to inspire and motivate both users and visitors, with new quotes added and updated regularly by the admin. This feature offers both users and visitors a positive and motivational experience while on the website.
+On the home page two cards are displayed, brielfy explaing the two features "Daily Journal" and Past Journals" with two corresponding buttons. If the user (or a visitor on the page) is not signed in, the buttons are changed to link to the sign up page, and displays the text "Sign in to Journal" and "Sign in to view Past Journals" respectively.
+A daily quote is displayed on the home page, in between the two features cards, to inspire and motivate both users and visitors, with new quotes added and updated regularly by the admin. This feature offers both users and visitors a positive and motivational experience while on the website.
+
+![Features and Daily Quote](docs/features_quotes.png)
 
 ### Log Daily Journal
 
 This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and upload a photo, the user can create a more personalised and memorable journal.
+A success message is displayed when the journal has been successfully submitted.
+
+![Daily Journal](docs/daily_journal.png)
+![Submit confirmation](docs/submitted.png)
 
 ### View Past Journal entries
 
-This feature lets the user view their past journal entries as a list, in a convenient way. This allows the user to look back and reflect on previous days thoughts and feelings.
+This feature lets the user view their past journal entries as a list, in a convenient way. When the user clicks on the list item for the journal they want to view, it expands to view the journal content. To collapse the opened jounal the user can click on the list item again.
+The ability to view past journals allows the user to look back and reflect on previous days thoughts and feelings.
+
+![Past Journals](docs/past_journals.png)
+![Past Journals expanded](docs/past_journals_expand.png)
 
 ### Edit Past Journal entries
 
 On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
+A success message is displayed when the journal has been updated sucessfully.
+
+![Edit Journal](docs/edit_journal.png)
+![Edit confirmation](docs/updated.png)
 
 ### Delete Past Journal entries
 
 On each journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
 It gives the user the flexibility to delete journals that no longer serve a purpose or that they would rather not have on record.
 The user is taken to a confirmation page where they have to confirm they want to delete the journal, or they have the option to cancel the initiated deletion.
+A success message is displayed when the journal has been deleted sucessfully.
+
+![Delete Journal confirmation](docs/deleted.png)
 
 ### Admin page
 
 While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete Daily Quotes and handle management regarding the Journal features, and users.
 
+![Admin page](docs/admin.png)
+
 ## User Stories
+
+I created user stories in Github and assigned them to 5 different milestones (Daily Journal, User Experience Improvements, User Authentication, Home Page and Development) and applied appropriate labels to each one. I organized and prioritized the development tasks within the My Healthy Mind project.
 
 ![User stories overview](docs/userstories.png)
 
@@ -113,7 +142,9 @@ The steps below were followed to deploy the app to Heroku:
 
 Open the Heroku website and select "New" to create a new app.
 After choosing a name for the new app, and selecting the correct region, click on "Create app".
-Navigate to "Settings" and go to the Config Vars section. Add a Config Var with the keyword "PORT" and value of "8000".
+Navigate to "Settings" and go to the Config Vars section.
+Add the neccessary Config Vars.
+(Making sure to remove the DISABLE_COLLECTSTATIC, 1 and DEBUG, True before deployment.)
 
 Navigate to the top menu and go to "Deploy". Scroll down and set the Deployment Method to "Github". Once Github is selected, locate your repository and link it to Heroku.
 Scroll down to Manual Deploy, ensure that the "main" branch is selected, and click "Deploy Branch".
@@ -129,3 +160,12 @@ Copy the repository link.
 Open Terminal, type git clone followed by the copied URL, and press enter to create your local clone.
 
 ## Credits
+
+- Code Institute LMS
+- I Think Therefore I Blog - LMS
+- The Slack Community
+- My mentor Daisy McGirr
+- Bootstrap documentation
+- Django documentation
+- uxwing.com - for social media icons
+- https://css-tricks.com/couple-takes-sticky-footer/ - How to create a sticky footer
