@@ -33,7 +33,7 @@ The Wireframe was made using Balsamiq Wireframes.
 
 ### Home Page with navigation
 
-The Home Page offers visitors a welcoming text and an image capturing the purpose of the website. A navbar is displayed on the top of the page for easy navigation between the websites different pages. A footer is displayed on the bottom of the page.
+The Home Page offers visitors a welcoming text and an image capturing the purpose of the website. A navbar is displayed on the top of the page for easy navigation between the websites different pages. The navbar items differ depending on if the user/visitor is signed in or not. A footer is displayed on the bottom of the page with links to social media platforms.
 
 ![Homepage with navbar visitor](docs/header_navbar.png)
 ![Navbar user](docs/navbar_loggedin.png)
@@ -70,14 +70,6 @@ The ability to view past journals allows the user to look back and reflect on pr
 ![Past Journals](docs/past_journals.png)
 ![Past Journals expanded](docs/past_journals_expand.png)
 
-### Edit Past Journal entries
-
-On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
-A success message is displayed when the journal has been updated sucessfully.
-
-![Edit Journal](docs/edit_journal.png)
-![Edit confirmation](docs/updated.png)
-
 ### Delete Past Journal entries
 
 On each journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
@@ -86,6 +78,14 @@ The user is taken to a confirmation page where they have to confirm they want to
 A success message is displayed when the journal has been deleted sucessfully.
 
 ![Delete Journal confirmation](docs/deleted.png)
+
+### Edit Past Journal entries
+
+On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
+A success message is displayed when the journal has been updated sucessfully.
+
+![Edit Journal](docs/edit_journal.png)
+![Edit confirmation](docs/updated.png)
 
 ### Admin page
 
@@ -100,6 +100,8 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 ![User stories overview](docs/userstories.png)
 
 ## Entity-relationship Diagram
+
+![Entity-relationship Diagram](docs/ERD.png)
 
 ## Testing
 
