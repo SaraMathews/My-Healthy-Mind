@@ -248,24 +248,24 @@ The git commands below were used throughout development to push code to the remo
 
 The steps below were followed to deploy the app to Heroku:
 
-Open the Heroku website and select "New" to create a new app.
-After choosing a name for the new app, and selecting the correct region, click on "Create app".
-Navigate to "Settings" and go to the Config Vars section.
-Add the neccessary Config Vars.
-(Making sure to remove the DISABLE_COLLECTSTATIC, 1 and DEBUG, True before deployment.)
+- Open the Heroku website and select "New" to create a new app.
+- After choosing a name for the new app, and selecting the correct region, click on "Create app".
+- Navigate to "Settings" and go to the Config Vars section.
+  -Add the neccessary Config Vars.
+  (Making sure to remove the DISABLE_COLLECTSTATIC, 1 and DEBUG, True before deployment.)
 
-Navigate to the top menu and go to "Deploy". Scroll down and set the Deployment Method to "Github". Once Github is selected, locate your repository and link it to Heroku.
-Scroll down to Manual Deploy, ensure that the "main" branch is selected, and click "Deploy Branch".
-You will see the text "Your app was successfully deployed.". Click the button "View" to open the link to your deployed app.
+- Navigate to the top menu and go to "Deploy". Scroll down and set the Deployment Method to "Github". Once Github is selected, locate your repository and link it to Heroku.
+- Scroll down to Manual Deploy, ensure that the "main" branch is selected, and click "Deploy Branch".
+- You will see the text "Your app was successfully deployed.". Click the button "View" to open the link to your deployed app.
 
 ### Clone the Repository from GitHub
 
 The steps below were followed to clone the repository locally:
 
-Navigate to the main page of the GitHub Repository you want to clone.
-Above the list of files, click on the drop-down button "<>Code".
-Copy the repository link.
-Open Terminal, type git clone followed by the copied URL, and press enter to create your local clone.
+- Navigate to the main page of the GitHub Repository you want to clone.
+- Above the list of files, click on the drop-down button "<>Code".
+- Copy the repository link.
+- Open Terminal, type git clone followed by the copied URL, and press enter to create your local clone.
 
 ## Credits
 
