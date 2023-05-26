@@ -35,8 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 {% if user.is_authenticated %}
-                <li class="nav-item list-bg ml-auto {% if request.path == '/home/' %}active{% endif %}"
-                    id="hamburger-home">
+                <li class="nav-item list-bg ml-auto" id="hamburger-home">
                     <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
                 </li>
                 <li class="nav-item list-bg ml-auto">

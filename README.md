@@ -155,6 +155,7 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 ### Performance
 
 Lighhouse
+
 WAVE Web Accessibility Evaluation Tools
 
 ### Validator testing

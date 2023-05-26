@@ -14,6 +14,7 @@
         <!--Edit Journal Form-->
         <form method="post" action="" id="journal-form" enctype="multipart/form-data">
             {% csrf_token %}
+            <label for="id_content"></label>
             {{ form.as_p }}
             <div class="column ml-lg-3 form-group journal-img">
                 {% if object.image %}
