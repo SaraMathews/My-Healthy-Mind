@@ -117,7 +117,7 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 ### JournalLog
 
 - id
-  This attribute serves as the primary key for the JournalLog model, uniquely identifying each record in the table.
+  - This attribute serves as the primary key for the JournalLog model, uniquely identifying each record in the table.
 - user
   This attribute is a Foreign Key field that establishes a relationship with the "User" model, indicating the user associated with each journal entry. It's a many-to-one relationship, where each journal entry is linked to a single user, and one user can have many journal entries.
 - created_on
