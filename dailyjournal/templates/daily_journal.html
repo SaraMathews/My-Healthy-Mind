@@ -27,20 +27,20 @@
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="column mr-lg-5 form-group date-box">
-                    <label for="id_created_on">Date:</label>
+                    <label for="id_created_on" aria-label="Date">Date:</label>
                     {{ form.created_on }}
                 </div>
         </div>
         <div class="column ml-lg-3 form-group">
-            <label for="inputContent">Your Journal Entry:</label>
+            <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
             {{ form.content }}
         </div>
         <div class="column ml-lg-3 form-group">
-            <label for="id_rating">How was your day?</label>
+            <label for="id_rating" aria-label="How was your day?">How was your day?</label>
             {{ form.rating }}
         </div>
         <div class="column ml-lg-3 form-group">
-            <label for="id_image">Photo of the day:</label><br>
+            <label for="id_image" aria-label="Photo of the day">Photo of the day:</label><br>
             {{ form.image }}
         </div>
 

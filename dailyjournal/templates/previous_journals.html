@@ -5,7 +5,7 @@
     <div class="container-fluid inner-container-journal pb-3">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
             <div class="column form-group">
-                <h3>Past Journals</h3>
+                <h2>Past Journals</h2>
             </div>
         </div>
         <!--Iterates through the user's logged journals-->
@@ -16,19 +16,19 @@
             </button>
             <div id="entry-{{ entry.id }}" class="collapse">
                 <div class="column ml-lg-1 form-group">
-                    <label>Date:</label>
+                    <label for="id_created_on" aria-label="Date">Date:</label>
                     <input type="text" class="form-control" value="{{ entry.created_on }}" readonly>
                 </div>
                 <div class="column ml-lg-1 form-group">
-                    <label>Journal Entry:</label>
+                    <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
                     <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
                 </div>
                 <div class="column ml-lg-1 form-group">
-                    <label>How was your day?</label>
+                    <label for="id_rating" aria-label="How was your day?">How was your day?</label>
                     <input type="text" class="form-control" value="{{ entry.rating }}" readonly>
                 </div>
                 <div class="column ml-lg-1 form-group journal-img">
-                    <label>Photo of the day:</label> <br>
+                    <label for="id_image" aria-label="Photo of the day">Photo of the day:</label> <br>
                     {% if entry.image %}
                     <img src="{{ entry.image.url }}" class="img-fluid" alt="Image of the day">
                     {% endif %}
@@ -41,8 +41,8 @@
                     </form>
                     <form action="{% url 'dailyjournal:delete_entry' entry.id %}" method="post">
                         {% csrf_token %}
-                        <a href="{% url 'dailyjournal:delete_entry' entry.id %}"
-                            class="btn button btn-red btn-delete">Delete</a>
+                        <a href="{% url 'dailyjournal:delete_entry' entry.id %}" class="btn button btn-red btn-delete"
+                            aria-label="Delete Journal">Delete</a>
                     </form>
 
                 </div>

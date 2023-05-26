@@ -8,23 +8,38 @@
     <div class="container-fluid inner-container-journal pb-3">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
             <div class="column form-group">
-                <h3>Past Journals</h3>
+                <h2>Daily Journal</h2>
             </div>
+            <!--Journal Form-->
+            <form method="post" action="" id="journal-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="column mr-lg-5 form-group date-box">
+                    <label for="id_created_on" aria-label="Date">Date:</label>
+                    {{ form.created_on }}
+                </div>
         </div>
-        <!--Edit Journal Form-->
-        <form method="post" action="" id="journal-form" enctype="multipart/form-data">
-            {% csrf_token %}
-            <label for="id_content"></label>
-            {{ form.as_p }}
-            <div class="column ml-lg-3 form-group journal-img">
-                {% if object.image %}
-                <img src="{{ object.image.url }}" class="img-fluid" alt="Photo of the day">
-                {% endif %}
-            </div>
-            <div class="column ml-lg-3 form-group d-flex justify-content-end">
-                <input type="submit" value="Save changes" class="btn button btn-edit">
-                <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
-            </div>
+        <div class="column ml-lg-3 form-group">
+            <label for="{{ form.content.id_for_label }}" aria-label="Your Journal Entry">Your Journal Entry:</label>
+            {{ form.content }}
+        </div>
+        <div class="column ml-lg-3 form-group">
+            <label for="{{ form.rating.id_for_label }}" aria-label="How was your day?">How was your day?</label>
+            {{ form.rating }}
+        </div>
+        <div class="column ml-lg-3 form-group journal-img">
+            <label for="{{ form.image.id_for_label }}" aria-label="Photo of the day">Photo of the day:</label><br>
+            {% if form.instance.image %}
+            <img src="{{ form.instance.image.url }}" class="img-fluid" alt="Image of the day">
+            {{ form.instance.image }}
+            {{ form.image }}
+            {% else %}
+            {{ form.image }}
+            {% endif %}
+        </div>
+        <div class="column ml-lg-3 form-group d-flex justify-content-end">
+            <input type="submit" value="Save changes" class="btn button btn-edit">
+            <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
+        </div>
         </form>
     </div>
 </div>
