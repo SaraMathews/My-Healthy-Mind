@@ -14,6 +14,8 @@ My Healthy Mind is aimed at people who want to prioritize their mental well-bein
 
 The purpose of My Healthy Mind is to provide users with an online space to log their daily journal, and to be able to reflect on past journals. With a user-friendly interface and features like daily rating and uploading photos, the goal is to to promote mental wellness and a positive mindset.
 
+![Device Mockup](docs/device_mockup.png)
+
 ## UX and design
 
 ### Mind Map
@@ -33,15 +35,19 @@ The Wireframe was made using Balsamiq Wireframes.
 
 ### Home Page with navigation
 
-The Home Page offers visitors a welcoming text and an image capturing the purpose of the website. A navbar is displayed on the top of the page for easy navigation between the websites different pages. The navbar items differ depending on if the user is signed in or not. A footer is displayed on the bottom of the page with links to social media platforms.
+- The Home Page offers visitors a welcoming text and an image capturing the purpose of the website.
+- A navbar is displayed on the top of the page for easy navigation between the websites different pages.
+- The navbar items differ depending on if the user is signed in or not.
+- A footer is displayed on the bottom of the page with links to social media platforms.
 
 ![Homepage with navbar visitor](docs/header_navbar.png)
 ![Navbar user](docs/navbar_loggedin.png)
 
 ### User autentication
 
-To be able to log a Daily Journal with the supporting features, the visitor of the webiste must first sign up. They can then sign in and sign out at any time. This feature of user authentication ensures secure access to the website's features. Only registered users can sign in, log a journal, view past journals, edit and delete their journals.
-When the user has either signed up, signed in or signed out, a success message will appear letting the user know the action was successfull.
+- To be able to log a Daily Journal with the supporting features, the visitor of the webiste must first sign up. They can then sign in and sign out at any time. This feature of user authentication ensures secure access to the website's features.
+- Only registered users can sign in, log a journal, view past journals, edit and delete their journals.
+- When the user has either signed up, signed in or signed out, a success message will appear letting the user know the action was successfull.
 
 ![Sign up](docs/signup.png)
 ![Sign in](docs/signin.png)
@@ -49,60 +55,62 @@ When the user has either signed up, signed in or signed out, a success message w
 
 ### Features and Daily Quotes Cards
 
-On the home page two cards are displayed, brielfy explaing the two features "Daily Journal" and Past Journals" with two corresponding buttons. If the user (or a visitor on the page) is not signed in, the buttons are changed to link to the sign up page, and displays the text "Sign in to Journal" and "Sign in to view Past Journals" respectively.
-A daily quote is displayed on the home page, in between the two features cards, to inspire and motivate both users and visitors, with new quotes added and updated regularly by the admin. This feature offers both users and visitors a positive and motivational experience while on the website.
+- On the home page two cards are displayed, brielfy explaing the two features "Daily Journal" and Past Journals" with two corresponding buttons. If the user (or a visitor on the page) is not signed in, the buttons are changed to link to the sign up page, and displays the text "Sign in to Journal" and "Sign in to view Past Journals" respectively.
+- A daily quote is displayed on the home page, in between the two features cards, to inspire and motivate both users and visitors, with new quotes added and updated regularly by the admin. This feature offers both users and visitors a positive and motivational experience while on the website.
 
 ![Features and Daily Quote](docs/features_quotes.png)
 
 ### Log Daily Journal
 
-This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and upload a photo, the user can create a more personalised and memorable journal.
-A success message is displayed when the journal has been successfully submitted.
+- This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and upload a photo, the user can create a more personalised and memorable journal.
+- A success message is displayed when the journal has been successfully submitted.
 
 ![Daily Journal](docs/daily_journal.png)
 ![Submit confirmation](docs/submitted.png)
 
 ### View Past Journal entries
 
-This feature lets the user view their past journal entries as a list, in a convenient way. When the user clicks on the list item for the journal they want to view, it expands to view the journal content. To collapse the opened jounal the user can click on the list item again.
-The ability to view past journals allows the user to look back and reflect on previous days thoughts and feelings.
+- This feature lets the user view their past journal entries as a list, in a convenient way. When the user clicks on the list item for the journal they want to view, it expands to view the journal content. To collapse the opened jounal the user can click on the list item again.
+- The ability to view past journals allows the user to look back and reflect on previous days thoughts and feelings.
 
 ![Past Journals](docs/past_journals.png)
 ![Past Journals expanded](docs/past_journals_expand.png)
 
 ### Delete Past Journal entries
 
-On each journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
-It gives the user the flexibility to delete journals that no longer serve a purpose or that they would rather not have on record.
-The user is taken to a confirmation page where they have to confirm they want to delete the journal, or they have the option to cancel the initiated deletion.
-A success message is displayed when the journal has been deleted sucessfully.
+- On each journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
+  It gives the user the flexibility to delete journals that no longer serve a purpose or that they would rather not have on record.
+- The user is taken to a confirmation page where they have to confirm they want to delete the journal, or they have the option to cancel the initiated deletion.
+- A success message is displayed when the journal has been deleted sucessfully.
 
 ![Delete Journal confirm](docs/confirm_deletion.png)
 ![Delete Journal success](docs/deleted.png)
 
 ### Edit Past Journal entries
 
-On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
-A success message is displayed when the journal has been updated sucessfully.
+- On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
+- A success message is displayed when the journal has been updated sucessfully.
 
 ![Edit Journal](docs/edit_journal.png)
 ![Edit confirmation](docs/updated.png)
 
 ### Error pages
 
-I've included three error pages for the webiste.
-Here is the 404 error page included below to illustrate the design presented to the user when they are redirected to an error page.
-The layout remains consistent across all error pages, with the appropriate error message displayed for each specific error.
+- I've included three error pages for the webiste.
+  Here is the 404 error page included below to illustrate the design presented to the user when they are redirected to an error page.
+- The layout remains consistent across all error pages, with the appropriate error message displayed for each specific error.
 
-- 404: Indicates that the requested resource could not be found on the server.
-- 403: Signifies that access to the requested resource is forbidden or restricted.
-- 500: Represents an internal server error, indicating that something went wrong on the server's side while processing the request.
+  - 404: Indicates that the requested resource could not be found on the server.
+  - 403: Signifies that access to the requested resource is forbidden or restricted.
+  - 500: Represents an internal server error, indicating that something went wrong on the server's side while processing the request.
 
 ### Admin page
 
-While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete Daily Quotes and handle management regarding the Journal features, and users.
+- While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete Daily Quotes and handle management regarding the Journal features, and users.
 
 ![Admin page](docs/admin.png)
+
+### Features left to implement
 
 ## User Stories
 
@@ -116,28 +124,28 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 ### JournalLog
 
-- id
+- **id**
   - This attribute serves as the primary key for the JournalLog model, uniquely identifying each record in the table.
-- user
+- **user**
   - This attribute is a Foreign Key field that establishes a relationship with the "User" model, indicating the user associated with each journal entry. It's a many-to-one relationship, where each journal entry is linked to a single user, and one user can have many journal entries.
-- created_on
+- **created_on**
   - This attribute represents the date when the journal was created, and is a DateField which is used to store dates (year,month and day)
-- content
+- **content**
   - This attribute stores the content of the Journal, and is a TextField which is used to store lager amounts of text data.
-- rating
+- **rating**
   - This attribute represents the daily rating that is given to to the Journal, and is a CharField which is used to store character data, such as strings. The available choices for the rating are 'Amazing', 'Good', 'Okay', 'Bad', and 'Awful'. The default value is set to 'Okay'.
-- image
+- **image**
   - This attribute stores the image linked with the Journal using CaloudinaryField, which is a field specifically designed for storing Cloudinary image references.
 
 ### DailyQuote
 
-- id
+- **id**
   - This attribute serves as the primary key for the DailyQuote model, uniquely identifying each record in the table.
-- quote
+- **quote**
   - This attribute stores the Daily quote using a TextField.
-- author
+- **author**
   - This attribute stores the name/details of the author of the Daily Quote, using a CharField
-- created_on
+- **created_on**
   - This attribute represents the date when the quote was created, using a DateField
 
 ![Entity-relationship Diagram](docs/ERD.png)
@@ -146,25 +154,34 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 ### Performance
 
+Lighhouse
+WAVE Web Accessibility Evaluation Tools
+
 ### Validator testing
 
+- PEP8 validator
+- W3C HTML validator
+- W3C CSS validator
+
 ### Functional testing
+
+Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories:
 
 ### Unfixed bugs
 
 ## Technologies
 
-- HTML
+- **HTML**
   - Used to structure and present the content of the web pages
-- CSS
+- **CSS**
   - For adding personalized stying to the web pages
-- Bootstrap
+- **Bootstrap**
   - To provide pre-designed and pre-built components to style the web pages
-- JavaScript
+- **JavaScript**
   - Used to enable interactive and dynamic behavior on the web pages
-- jQuery
+- **jQuery**
   - Is a JavaScript library that makes it easier to build an interactive and dynamic website.
-- Python
+- **Python**
   - Used in Django projects as the core programming language, responsible for handling the server-side logic, data processing, and constructing the backend functionality of applications, like My Healthy Mind.
   - Python packages dependencies used
     - asgiref==3.6.0
@@ -183,29 +200,33 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
     - sqlparse==0.4.4
     - urllib3==1.26.15
     - django-cloudinary-storage==0.3.0
-- Django
+- **Django**
   - This project was created using the Django framework.
-- Balsamic Wireframes
+- **Balsamic Wireframes**
   - Used to create the wireframes
-- uxwing.com
+- **Lucidchart**
+  - Used to make the MindMap
+- **ui.dev/amiresponsive**
+  - Used to create the Device Mockup image
+- **uxwing.com**
   - Used for the social media icons
-- CodeAnywhere
+- **CodeAnywhere**
   - The IDE used for writing the code
-- Github
+- **Github**
   - Used for storing my project
-- Heroku
+- **Heroku**
   - Used as the platform to deploy my project
-- Google Fonts
+- **Google Fonts**
   - Used to import the Lato font
-- PEP8 validator
+- **PEP8 validator**
   - Used to check so the python code in my project adheres to the guidelines specified in PEP 8
-- W3C HTML & W3C CSS
+- **W3C HTML & W3C CSS**
   - Used to check my HTML and CSS code for errors
-- Lighthouse
+- **Lighthouse**
   - Used to help analyze and improve the quality of my website
-- WAVE Web Accessibility Evaluation Tools
+- **WAVE Web Accessibility Evaluation Tools**
   - Used to help me identify potential accessibility issues on my webiste
-- Chrome Developer Tools
+- **Chrome Developer Tools**
   - Used to inspect and debug code
 
 ### Databases
