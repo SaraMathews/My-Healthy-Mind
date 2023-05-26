@@ -119,26 +119,26 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 - id
   - This attribute serves as the primary key for the JournalLog model, uniquely identifying each record in the table.
 - user
-  This attribute is a Foreign Key field that establishes a relationship with the "User" model, indicating the user associated with each journal entry. It's a many-to-one relationship, where each journal entry is linked to a single user, and one user can have many journal entries.
+  - This attribute is a Foreign Key field that establishes a relationship with the "User" model, indicating the user associated with each journal entry. It's a many-to-one relationship, where each journal entry is linked to a single user, and one user can have many journal entries.
 - created_on
-  This attribute represents the date when the journal was created, and is a DateField which is used to store dates (year,month and day)
+  - This attribute represents the date when the journal was created, and is a DateField which is used to store dates (year,month and day)
 - content
-  This attribute stores the content of the Journal, and is a TextField which is used to store lager amounts of text data.
+  - This attribute stores the content of the Journal, and is a TextField which is used to store lager amounts of text data.
 - rating
-  This attribute represents the daily rating that is given to to the Journal, and is a CharField which is used to store character data, such as strings. The available choices for the rating are 'Amazing', 'Good', 'Okay', 'Bad', and 'Awful'. The default value is set to 'Okay'.
+  - This attribute represents the daily rating that is given to to the Journal, and is a CharField which is used to store character data, such as strings. The available choices for the rating are 'Amazing', 'Good', 'Okay', 'Bad', and 'Awful'. The default value is set to 'Okay'.
 - image
-  This attribute stores the image linked with the Journal using CaloudinaryField, which is a field specifically designed for storing Cloudinary image references.
+  - This attribute stores the image linked with the Journal using CaloudinaryField, which is a field specifically designed for storing Cloudinary image references.
 
 ### DailyQuote
 
 - id
-  This attribute serves as the primary key for the DailyQuote model, uniquely identifying each record in the table.
+  - This attribute serves as the primary key for the DailyQuote model, uniquely identifying each record in the table.
 - quote
-  This attribute stores the Daily quote using a TextField.
+  - This attribute stores the Daily quote using a TextField.
 - author
-  This attribute stores the name/details of the author of the Daily Quote, using a CharField
+  - This attribute stores the name/details of the author of the Daily Quote, using a CharField
 - created_on
-  This attribute represents the date when the quote was created, using a DateField
+  - This attribute represents the date when the quote was created, using a DateField
 
 ![Entity-relationship Diagram](docs/ERD.png)
 
@@ -154,17 +154,63 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 ## Technologies
 
-Django, gunicorn(server heroku),
-supporting libraries - dj_database_url, psycopg2
-cloudinary
-
-### Languages
-
-### Frameworks and libraries
+- HTML
+  - Used to structure and present the content of the web pages
+- CSS
+  - For adding personalized stying to the web pages
+- Bootstrap
+  - To provide pre-designed and pre-built components to style the web pages
+- JavaScript
+  - Used to enable interactive and dynamic behavior on the web pages
+- jQuery
+  - Is a JavaScript library that makes it easier to build an interactive and dynamic website.
+- Python
+  - Used in Django projects as the core programming language, responsible for handling the server-side logic, data processing, and constructing the backend functionality of applications, like My Healthy Mind.
+  - Python packages dependencies used
+    - asgiref==3.6.0
+    - cloudinary==1.32.0
+    - dj-database-url==0.5.0
+    - dj3-cloudinary-storage==0.0.6
+    - Django==3.2.19
+    - django-allauth==0.54.0
+    - gunicorn==20.1.0
+    - oauthlib==3.2.2
+    - psycopg2==2.9.6
+    - PyJWT==2.7.0
+    - python3-openid==3.2.0
+    - pytz==2023.3
+    - requests-oauthlib==1.3.1
+    - sqlparse==0.4.4
+    - urllib3==1.26.15
+    - django-cloudinary-storage==0.3.0
+- Django
+  - This project was created using the Django framework.
+- Balsamic Wireframes
+  - Used to create the wireframes
+- uxwing.com
+  - Used for the social media icons
+- CodeAnywhere
+  - The IDE used for writing the code
+- Github
+  - Used for storing my project
+- Heroku
+  - Used as the platform to deploy my project
+- Google Fonts
+  - Used to import the Lato font
+- PEP8 validator
+  - Used to check so the python code in my project adheres to the guidelines specified in PEP 8
+- W3C HTML & W3C CSS
+  - Used to check my HTML and CSS code for errors
+- Lighthouse
+  - Used to help analyze and improve the quality of my website
+- WAVE Web Accessibility Evaluation Tools
+  - Used to help me identify potential accessibility issues on my webiste
+- Chrome Developer Tools
+  - Used to inspect and debug code
 
 ### Databases
 
-PostgreSQL
+- I used PostgreSQL as my database for storing and managing data
 
 ## Deployment
 
@@ -172,10 +218,9 @@ PostgreSQL
 
 The git commands below were used throughout development to push code to the remote repository in GitHub:
 
-git add . - This command was used to add a change in the working directory to the staging area.
-git commit -m "message" -This command was used to save changes to the local repository. A brief description of what has changed and when.
-git push - This command was used to push all commits to the remote repository on GitHub.
-Deploy to Heroku
+`git add .` - This command was used to add a change in the working directory to the staging area.
+`git commit -m "message" `-This command was used to save changes to the local repository. A brief description of what has changed and when.
+`git push`- This command was used to push all commits to the remote repository on GitHub.
 
 ### Deploy to Heroku
 
@@ -208,5 +253,4 @@ Open Terminal, type git clone followed by the copied URL, and press enter to cre
 - My mentor Daisy McGirr
 - Bootstrap documentation
 - Django documentation
-- uxwing.com - for social media icons
 - https://css-tricks.com/couple-takes-sticky-footer/ - How to create a sticky footer
