@@ -33,7 +33,7 @@ The Wireframe was made using Balsamiq Wireframes.
 
 ### Home Page with navigation
 
-The Home Page offers visitors a welcoming text and an image capturing the purpose of the website. A navbar is displayed on the top of the page for easy navigation between the websites different pages. The navbar items differ depending on if the user/visitor is signed in or not. A footer is displayed on the bottom of the page with links to social media platforms.
+The Home Page offers visitors a welcoming text and an image capturing the purpose of the website. A navbar is displayed on the top of the page for easy navigation between the websites different pages. The navbar items differ depending on if the user is signed in or not. A footer is displayed on the bottom of the page with links to social media platforms.
 
 ![Homepage with navbar visitor](docs/header_navbar.png)
 ![Navbar user](docs/navbar_loggedin.png)
@@ -77,7 +77,8 @@ It gives the user the flexibility to delete journals that no longer serve a purp
 The user is taken to a confirmation page where they have to confirm they want to delete the journal, or they have the option to cancel the initiated deletion.
 A success message is displayed when the journal has been deleted sucessfully.
 
-![Delete Journal confirmation](docs/deleted.png)
+![Delete Journal confirm](docs/confirm_deletion.png)
+![Delete Journal success](docs/deleted.png)
 
 ### Edit Past Journal entries
 
