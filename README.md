@@ -88,6 +88,16 @@ A success message is displayed when the journal has been updated sucessfully.
 ![Edit Journal](docs/edit_journal.png)
 ![Edit confirmation](docs/updated.png)
 
+### Error pages
+
+I've included three error pages for the webiste.
+Here is the 404 error page included below to illustrate the design presented to the user when they are redirected to an error page.
+The layout remains consistent across all error pages, with the appropriate error message displayed for each specific error.
+
+- 404: Indicates that the requested resource could not be found on the server.
+- 403: Signifies that access to the requested resource is forbidden or restricted.
+- 500: Represents an internal server error, indicating that something went wrong on the server's side while processing the request.
+
 ### Admin page
 
 While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete Daily Quotes and handle management regarding the Journal features, and users.
