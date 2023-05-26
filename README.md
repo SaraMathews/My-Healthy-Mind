@@ -112,6 +112,34 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 
 ## Entity-relationship Diagram
 
+I created two ERD's, one for the Daily Journal and for for the Daily Quote.
+
+### JournalLog
+
+- id
+  This attribute serves as the primary key for the JournalLog model, uniquely identifying each record in the table.
+- user
+  This attribute is a Foreign Key field that establishes a relationship with the "User" model, indicating the user associated with each journal entry. It's a many-to-one relationship, where each journal entry is linked to a single user, and one user can have many journal entries.
+- created_on
+  This attribute represents the date when the journal was created, and is a DateField which is used to store dates (year,month and day)
+- content
+  This attribute stores the content of the Journal, and is a TextField which is used to store lager amounts of text data.
+- rating
+  This attribute represents the daily rating that is given to to the Journal, and is a CharField which is used to store character data, such as strings. The available choices for the rating are 'Amazing', 'Good', 'Okay', 'Bad', and 'Awful'. The default value is set to 'Okay'.
+- image
+  This attribute stores the image linked with the Journal using CaloudinaryField, which is a field specifically designed for storing Cloudinary image references.
+
+### DailyQuote
+
+- id
+  This attribute serves as the primary key for the DailyQuote model, uniquely identifying each record in the table.
+- quote
+  This attribute stores the Daily quote using a TextField.
+- author
+  This attribute stores the name/details of the author of the Daily Quote, using a CharField
+- created_on
+  This attribute represents the date when the quote was created, using a DateField
+
 ![Entity-relationship Diagram](docs/ERD.png)
 
 ## Testing
