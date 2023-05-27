@@ -36,11 +36,6 @@ class JournalForm(forms.ModelForm):
         ordering = ['-created_on']
         widgets = {
             'created_on': DateInput(attrs={'type': 'date'}),
-            'content': forms.Textarea(attrs={
-                'placeholder': "What's on your mind today?",
-                'class': 'form-control textarea-form-content',
-                'id': 'id_content'
-            }),
             'rating': forms.Select(choices=RATING_OPTIONS),
             'image': forms.ClearableFileInput(attrs={'multiple': False}),
         }

@@ -154,15 +154,22 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 ### Performance
 
-Lighhouse
+**Lighhouse**
 
-WAVE Web Accessibility Evaluation Tools
+- Performance: 75
+- Accessibility: 100
+- Bess Practices: 100
+- SEO: 100
+
+**WAVE Web Accessibility Evaluation Tools**
+
+- No errors
 
 ### Validator testing
 
-- PEP8 validator
-- W3C HTML validator
-- W3C CSS validator
+**PEP8 validator**
+**W3C HTML validator**
+**W3C CSS validator**
 
 ### Functional testing
 
@@ -240,9 +247,9 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
 
 The git commands below were used throughout development to push code to the remote repository in GitHub:
 
-`git add .` - This command was used to add a change in the working directory to the staging area.
-`git commit -m "message" `-This command was used to save changes to the local repository. A brief description of what has changed and when.
-`git push`- This command was used to push all commits to the remote repository on GitHub.
+- `git add .` - This command was used to add a change in the working directory to the staging area.
+- `git commit -m "message" `-This command was used to save changes to the local repository. A brief description of what has changed and when.
+- `git push`- This command was used to push all commits to the remote repository on GitHub.
 
 ### Deploy to Heroku
 
