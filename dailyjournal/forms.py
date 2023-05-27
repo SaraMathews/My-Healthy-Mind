@@ -4,9 +4,9 @@ from .models import JournalLog
 from cloudinary.forms import CloudinaryFileField
 
 """
-Form for creating and updating a journal. 
-The user can specify the date when the journal was created, and add content to 
-their journal. 
+Form for creating and updating a journal.
+The user can specify the date when the journal was created, and add content to
+their journal.
 """
 
 RATING_OPTIONS = (
@@ -27,9 +27,8 @@ class JournalForm(forms.ModelForm):
         initial='Okay',
     )
 
-    image = CloudinaryFileField(required=False, 
-    widget=forms.ClearableFileInput(attrs={'id': 'id_image'})
-    )
+    image = CloudinaryFileField(required=False,
+                                widget=forms.ClearableFileInput(attrs={'id': 'id_image'}))
 
     class Meta:
         model = JournalLog

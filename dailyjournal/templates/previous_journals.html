@@ -17,22 +17,21 @@
             <div id="entry-{{ entry.id }}" class="collapse">
                 <div class="column ml-lg-1 form-group">
                     <label for="id_created_on" aria-label="Date">Date:</label>
-                    <input type="text" class="form-control" value="{{ entry.created_on }}" readonly>
+                    <input type="text" class="form-control" value="{{ entry.created_on }}" readonly id="id_created_on">
                 </div>
                 <div class="column ml-lg-1 form-group">
                     <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
-                    <textarea class="form-control" rows="3" readonly>{{ entry.content }}</textarea>
+                    <textarea class="form-control" rows="3" readonly id="inputContent">{{ entry.content }}</textarea>
                 </div>
                 <div class="column ml-lg-1 form-group">
                     <label for="id_rating" aria-label="How was your day?">How was your day?</label>
-                    <input type="text" class="form-control" value="{{ entry.rating }}" readonly>
+                    <input type="text" class="form-control" value="{{ entry.rating }}" readonly id="id_rating">
                 </div>
                 <div class="column ml-lg-1 form-group journal-img">
-                    <label for="id_image" aria-label="Photo of the day">Photo of the day:</label> <br>
+                    <p aria-label="Photo of the day">Photo of the day:</p> <br>
                     {% if entry.image %}
-                    <img src="{{ entry.image.url }}" class="img-fluid" alt="Image of the day">
+                    <img src="{{ entry.image.url }}" class="img-fluid" alt="Photo of the day">
                     {% endif %}
-
                 </div>
                 <div class="column ml-lg-3 form-group d-flex justify-content-end">
                     <form action="{% url 'dailyjournal:edit_entry' entry.id %}" method="post">
@@ -44,7 +43,6 @@
                         <a href="{% url 'dailyjournal:delete_entry' entry.id %}" class="btn button btn-red btn-delete"
                             aria-label="Delete Journal">Delete</a>
                     </form>
-
                 </div>
             </div>
         </div>
