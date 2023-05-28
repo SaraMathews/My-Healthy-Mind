@@ -1,11 +1,8 @@
 {% extends "base.html" %}
+{% block edit %}
 {% load static %}
-
-{% block title %}Edit Journal {{ object.id }}{% endblock %}
-
-{% block content %}
-<div class="container outer-container d-flex justify-content-center align-items-center">
-    <div class="container-fluid inner-container-journal">
+<div class="container outer-container d-flex justify-content align-items-center">
+    <div class="container-fluid inner-container-journal pb-5">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
             <div class="column form-group">
                 <h2>Daily Journal</h2>
@@ -17,31 +14,35 @@
                     <label for="id_created_on" aria-label="Date">Date:</label>
                     {{ form.created_on }}
                 </div>
-                <div class="column ml-3 mr-3 form-group">
-                    <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
-                    {{ form.content }}
-                </div>
-                <div class="column ml-3 mr-3 form-group">
-                    <label for="id_rating" aria-label="How was your day?">How was your day?</label>
-                    {{ form.rating }}
-                </div>
-                <div class="column ml-lg-3 form-group journal-img">
-                    <label for="{{ form.image.id_for_label }}" aria-label="Photo of the day">Photo of the
-                        day:</label><br>
-                    {% if form.instance.image %}
-                    <img src="{{ form.instance.image.url }}" class="img-fluid" alt="Image of the day">
-                    {{ form.instance.image }}
-                    {{ form.image }}
-                    {% else %}
-                    {{ form.image }}
-                    {% endif %}
-                </div>
-                <div class="column ml-lg-3 form-group d-flex justify-content-end">
-                    <input type="submit" value="Save changes" class="btn button btn-edit">
-                    <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
-                </div>
-            </form>
         </div>
+        <div class="ml-lg-3 form-group">
+            <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
+            <div class="d-flex align-items-stretch">
+                {{ form.content }}
+            </div>
+        </div>
+
+        <div class="column ml-lg-3 form-group">
+            <label for="id_rating" aria-label="How was your day?">How was your day?</label>
+            {{ form.rating }}
+        </div>
+        <div class="column ml-lg-3 form-group journal-img">
+            <label for="{{ form.image.id_for_label }}" aria-label="Photo of the day">Photo of the
+                day:</label><br>
+            {% if form.instance.image %}
+            <img src="{{ form.instance.image.url }}" class="img-fluid" alt="Image of the day">
+            {{ form.instance.image }}
+            {{ form.image }}
+            {% else %}
+            {{ form.image }}
+            {% endif %}
+        </div>
+        <div class="column mr-3 form-group d-flex justify-content-end">
+            <input type="submit" value="Save changes" class="btn button btn-edit">
+            <button type="button" onclick="cancelDelete()" class="btn button">Cancel</button>
+        </div>
+        </form>
+
     </div>
 </div>
 <script>
@@ -50,5 +51,4 @@
         window.history.back();
     }
 </script>
-
 {% endblock %}

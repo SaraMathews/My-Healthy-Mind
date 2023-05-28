@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% block journalform %}
 {% load static %}
-
-<div class="container outer-container d-flex justify-content-center align-items-center">
-    <div class="container-fluid inner-container-journal">
+<div class="container outer-container d-flex justify-content align-items-center">
+    <div class="container-fluid inner-container-journal pb-3">
         <div class="row ml-1 mt-2 mt-lg-4 ml-lg-3 justify-content-between">
             <div class="column form-group">
                 <h2>Daily Journal</h2>
@@ -17,16 +16,16 @@
                     {{ form.created_on }}
                 </div>
         </div>
-        <div class="column ml-3 mr-3 form-group">
+        <div class="column ml-lg-3 mr-lg-3 form-group">
             <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
             <textarea id="inputContent" name="content" rows="10" class="form-control"
                 placeholder="What's on your mind today?"></textarea>
         </div>
-        <div class="column ml-3 mr-3 form-group">
+        <div class="column ml-lg-3 mr-3 form-group">
             <label for="id_rating" aria-label="How was your day?">How was your day?</label>
             {{ form.rating }}
         </div>
-        <div class="column ml-3 mr-3 form-group">
+        <div class="column ml-lg-3 mr-3 form-group">
             <label for="id_image" aria-label="Photo of the day">Photo of the day:</label><br>
             {{ form.image }}
         </div>

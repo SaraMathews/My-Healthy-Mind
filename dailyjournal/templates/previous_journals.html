@@ -10,7 +10,7 @@
         </div>
         <!--Iterates through the user's logged journals-->
         {% for entry in journal_entries %}
-        <div class="pb-2 journal-entry">
+        <div class="pb-2">
             <button class="btn button btn-entry" data-toggle="collapse" data-target="#entry-{{ entry.id }}">
                 {{ entry.created_on }} - Click to expand
             </button>
@@ -21,14 +21,14 @@
                 </div>
                 <div class="column ml-3 mr-3 form-group">
                     <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
-                    <textarea class="form-control" readonly id="inputContent">{{ entry.content }}</textarea>
+                    <textarea class="form-control" rows="10" readonly id="inputContent">{{ entry.content }}</textarea>
                 </div>
                 <div class="column ml-3 mr-3 form-group">
                     <label for="id_rating" aria-label="How was your day?">How was your day?</label>
                     <input type="text" class="form-control" value="{{ entry.rating }}" readonly id="id_rating">
                 </div>
                 <div class="column ml-3 mr-3 form-group journal-img">
-                    <p aria-label="Photo of the day">Photo of the day:</p><br>
+                    <p aria-label="Photo of the day">Photo of the day:</p>
                     {% if entry.image %}
                     <img src="{{ entry.image.url }}" class="img-fluid" alt="Photo of the day">
                     {% endif %}
