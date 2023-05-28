@@ -4,8 +4,8 @@ from .models import DailyQuote
 from random import choice
 
 """
-Renders the home page with a randomly selected quote from the database. 
-If no quotes exists in the database, a default quote is shown instead. 
+Renders the home page with a randomly selected quote from the database.
+If no quotes exists in the database, a default quote is shown instead.
 """
 
 

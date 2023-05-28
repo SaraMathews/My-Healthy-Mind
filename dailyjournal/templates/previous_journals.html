@@ -15,25 +15,25 @@
                 {{ entry.created_on }} - Click to expand
             </button>
             <div id="entry-{{ entry.id }}" class="collapse">
-                <div class="column ml-lg-1 form-group">
+                <div class="column ml-3 mr-3 form-group">
                     <label for="id_created_on" aria-label="Date">Date:</label>
                     <input type="text" class="form-control" value="{{ entry.created_on }}" readonly id="id_created_on">
                 </div>
-                <div class="column ml-lg-1 form-group">
+                <div class="column ml-3 mr-3 form-group">
                     <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
-                    <textarea class="form-control" rows="3" readonly id="inputContent">{{ entry.content }}</textarea>
+                    <textarea class="form-control" readonly id="inputContent">{{ entry.content }}</textarea>
                 </div>
-                <div class="column ml-lg-1 form-group">
+                <div class="column ml-3 mr-3 form-group">
                     <label for="id_rating" aria-label="How was your day?">How was your day?</label>
                     <input type="text" class="form-control" value="{{ entry.rating }}" readonly id="id_rating">
                 </div>
-                <div class="column ml-lg-1 form-group journal-img">
-                    <p aria-label="Photo of the day">Photo of the day:</p> <br>
+                <div class="column ml-3 mr-3 form-group journal-img">
+                    <p aria-label="Photo of the day">Photo of the day:</p><br>
                     {% if entry.image %}
                     <img src="{{ entry.image.url }}" class="img-fluid" alt="Photo of the day">
                     {% endif %}
                 </div>
-                <div class="column ml-lg-3 form-group d-flex justify-content-end">
+                <div class="column mr-3 form-group d-flex justify-content-end">
                     <form action="{% url 'dailyjournal:edit_entry' entry.id %}" method="post">
                         {% csrf_token %}
                         <a href="{% url 'dailyjournal:edit_entry' entry.id %}" class="btn button btn-edit">Edit</a>

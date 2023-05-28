@@ -92,7 +92,9 @@ Allows the user to edit their own journals.
 """
 
 
-class EditJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditJournalEntryView(LoginRequiredMixin,
+                           UserPassesTestMixin,
+                           UpdateView):
     model = JournalLog
     form_class = JournalForm
     template_name = 'edit_journal.html'
@@ -109,6 +111,6 @@ class EditJournalEntryView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         formatted_date = self.object.created_on.strftime("%B %d, %Y")
-        messages.success(
-            self.request, f"Your Journal for {formatted_date} has been updated.")
+        message = f"Your Journal for {formatted_date} has been updated."
+        messages.success(self.request, message)
         return super().form_valid(form)

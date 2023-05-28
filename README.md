@@ -168,8 +168,18 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 ### Validator testing
 
 **PEP8 validator**
+
+- No errors
+
+**JSHint**
+
+-
+
 **W3C HTML validator**
+
 **W3C CSS validator**
+
+- No errors
 
 ### Functional testing
 
@@ -226,8 +236,10 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
   - Used as the platform to deploy my project
 - **Google Fonts**
   - Used to import the Lato font
-- **PEP8 validator**
+- **PEP8 validator (CI Python Linter)**
   - Used to check so the python code in my project adheres to the guidelines specified in PEP 8
+- JSHint
+-
 - **W3C HTML & W3C CSS**
   - Used to check my HTML and CSS code for errors
 - **Lighthouse**

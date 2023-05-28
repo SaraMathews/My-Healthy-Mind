@@ -12,21 +12,21 @@
             <form method="post" action="{% url 'dailyjournal:log_journal' %}" id="journal-form"
                 enctype="multipart/form-data">
                 {% csrf_token %}
-                <div class="column mr-lg-5 form-group date-box">
+                <div class="column mr-3 form-group date-box">
                     <label for="id_created_on" aria-label="Date">Date:</label>
                     {{ form.created_on }}
                 </div>
         </div>
-        <div class="column ml-lg-3 form-group">
+        <div class="column ml-3 mr-3 form-group">
             <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
             <textarea id="inputContent" name="content" rows="10" class="form-control"
                 placeholder="What's on your mind today?"></textarea>
         </div>
-        <div class="column ml-lg-3 form-group">
+        <div class="column ml-3 mr-3 form-group">
             <label for="id_rating" aria-label="How was your day?">How was your day?</label>
             {{ form.rating }}
         </div>
-        <div class="column ml-lg-3 form-group">
+        <div class="column ml-3 mr-3 form-group">
             <label for="id_image" aria-label="Photo of the day">Photo of the day:</label><br>
             {{ form.image }}
         </div>

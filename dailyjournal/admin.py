@@ -2,10 +2,12 @@ from django.contrib import admin
 from .models import JournalLog
 
 """
-Displays the list of journals, with user, when the journal was created and 
-the journal's content. 
+Displays the list of journals, with user, when the journal was created and
+the journal's content.
 The admin can filter the journals by user and creation date.
 """
+
+
 class AdminJournalLog(admin.ModelAdmin):
     list_display = ['user', 'created_on', 'content']
     list_filter = ['user', 'created_on']

@@ -218,7 +218,6 @@ footer {
 .journal-img {
     max-width: 550px;
     max-height: 550px;
-    overflow: scroll;
 }
 
 /* Past Journals Page */

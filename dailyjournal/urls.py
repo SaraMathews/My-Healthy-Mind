@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import LogJournalView, JournalListView, DeleteJournalEntryView, EditJournalEntryView
+from .views import (LogJournalView,
+                    JournalListView,
+                    DeleteJournalEntryView,
+                    EditJournalEntryView)
 
 """
 Defines the URL patterns for all the journal-related features.

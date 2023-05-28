@@ -28,7 +28,8 @@ class JournalForm(forms.ModelForm):
     )
 
     image = CloudinaryFileField(required=False,
-                                widget=forms.ClearableFileInput(attrs={'id': 'id_image'}))
+                                widget=forms.ClearableFileInput(
+                                    attrs={'id': 'id_image'}))
 
     class Meta:
         model = JournalLog
