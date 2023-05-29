@@ -222,6 +222,10 @@ footer {
     overflow: scroll;
 }
 
+#id_image {
+    width: 100%;
+}
+
 /* Past Journals Page */
 .view-more {
     text-align: center;

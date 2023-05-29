@@ -17,20 +17,18 @@
         </div>
         <div class="ml-lg-3 form-group">
             <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
-            <div class="d-flex align-items-stretch">
-                {{ form.content }}
-            </div>
+            {{ form.content }}
         </div>
 
         <div class="column ml-lg-3 form-group">
             <label for="id_rating" aria-label="How was your day?">How was your day?</label>
             {{ form.rating }}
         </div>
-        <div class="column ml-lg-3 form-group journal-img">
-            <label for="{{ form.image.id_for_label }}" aria-label="Photo of the day">Photo of the
+        <div class="column ml-lg-3 mr-3 form-group journal-img">
+            <label for="id_image" aria-label="Photo of the day">Photo of the
                 day:</label><br>
             {% if form.instance.image %}
-            <img src="{{ form.instance.image.url }}" class="img-fluid" alt="Image of the day">
+            <img src="{{ form.instance.image.url }}" class="img-fluid" alt="Photo of the day">
             {{ form.instance.image }}
             {{ form.image }}
             {% else %}
