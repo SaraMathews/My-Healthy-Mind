@@ -18,8 +18,7 @@
         </div>
         <div class="column ml-lg-3 mr-lg-3 form-group">
             <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
-            <textarea id="inputContent" name="content" rows="10" class="form-control"
-                placeholder="What's on your mind today?"></textarea>
+            {{ form.content }}
         </div>
         <div class="column ml-lg-3 mr-3 form-group">
             <label for="id_rating" aria-label="How was your day?">How was your day?</label>
@@ -34,10 +33,10 @@
             <div class="btn-group" role="group" aria-label="Journal actions">
                 <!--Submit btn to submit the Journal-->
                 <button type="submit" class="btn button btn-form">
-                    Submit Journal
+                    Submit
                 </button>
                 <!--Discard btn to discard the started Journal-->
-                <button type="button" class="btn button btn-red" id="discard-btn">Discard Journal</button>
+                <button type="button" class="btn button btn-red" id="discard-btn">Discard</button>
             </div>
         </div>
         </form>
