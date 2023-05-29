@@ -183,7 +183,22 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 ### Functional testing
 
-Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories:
+Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories: Home Page, Daily journal, User Autenthication, Error Pages & Success messages and Admin. 
+
+**Home Page**
+![Test Navbar and Footer](docs/test_navbar_footer.png)
+![Test Daily Quote and Features cards](docs/test_quote_featurescard.png)
+
+**Daily Journal**
+![Test Daily Journal](docs/test_dailyjournal.png)
+
+**User Autenthication**
+![Test User Autenthication](docs/test_user_authentication.png)
+
+**Error Pages & Success messages**
+![Test Error Pages & Success messages](docs/test_error_successmessages.png)
+
+**Admin**
 
 ### Unfixed bugs
 
