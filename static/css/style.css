@@ -3,6 +3,7 @@ html,
 body {
     font-family: lato;
     height: 100%;
+    margin: 0;
 }
 
 body {
@@ -110,6 +111,7 @@ h2 {
     height: 200px;
 }
 
+/* Buttons */
 .button {
     background-color: white;
     color: #5C4033;
@@ -131,7 +133,6 @@ h2 {
 footer {
     background-color: #f8eee3;
     flex-shrink: 0;
-
     border-top: 0.5px solid #5C4033;
 }
 
@@ -256,10 +257,6 @@ footer {
 
     .container-features {
         margin-top: 50px;
-    }
-
-    .textarea-form-content {
-        width: 80%;
     }
 
     .btn-previous {
