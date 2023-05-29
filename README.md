@@ -292,6 +292,17 @@ The steps below were followed to clone the repository locally:
 - I Think Therefore I Blog - LMS
 - The Slack Community
 - My mentor Daisy McGirr
-- Bootstrap documentation
-- Django documentation
+  - https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_
+- Tutor Assistance
+- Bootstrap 4 documentation - www.getbootstrap.com
+- Bootstrap 4 - www.3schools.com
+- Bootstrap CSS Framework - Full Course for Beginners - https://www.youtube.com/watch?v=-qfEOE4vtxE
+- Django documentation - https://docs.djangoproject.com/en/4.2/
+- Python Django Web Framework - Full Course for Beginners - https://www.youtube.com/watch?v=F5mRW0jo-U4&list=PLTwiqKOPckq-B8XQQ-p7w4U11J6q8vwSo
 - https://css-tricks.com/couple-takes-sticky-footer/ - How to create a sticky footer
+- uxwing.com - social media icons
+- Allauth - for autentication pages
+- https://tinypng.com/ - resize images
+**Inspired by**
+- Build a Personal Diary With Django and Python - https://realpython.com/django-diary-project-python/
+- Build a Personal Journal With Django and Python - https://betterprogramming.pub/build-a-personal-journal-with-django-and-python-f4835d27368c
