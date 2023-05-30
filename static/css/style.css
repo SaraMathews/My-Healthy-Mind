@@ -74,7 +74,7 @@ h2 {
 .jumbotron {
     background-color: #f8eee3;
     border-bottom: 0.5px solid #5C4033;
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -88,7 +88,7 @@ h2 {
     border: 3px solid #5C4033;
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
-    margin-top: 80px;
+    margin-top: 20px;
     width: 19rem;
     background-color: #f8eee3;
 }
