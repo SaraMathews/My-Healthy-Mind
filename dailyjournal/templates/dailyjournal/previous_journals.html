@@ -10,7 +10,7 @@
         </div>
         <!--Iterates through the user's logged journals-->
         {% for entry in journal_entries %}
-        <div class="pb-2">
+        <div class="pb-2 journal-entry">
             <button class="btn button btn-entry" data-toggle="collapse" data-target="#entry-{{ entry.id }}">
                 {{ entry.created_on }} - Click to expand
             </button>

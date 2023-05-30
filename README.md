@@ -14,7 +14,7 @@ My Healthy Mind is aimed at people who want to prioritize their mental well-bein
 
 The purpose of My Healthy Mind is to provide users with an online space to log their daily journal, and to be able to reflect on past journals. With a user-friendly interface and features like daily rating and uploading photos, the goal is to to promote mental wellness and a positive mindset.
 
-![Device Mockup](docs/device_mockup.png)
+![Device Mockup](docs/)
 
 ## UX and design
 
@@ -118,9 +118,7 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 
 ![User stories overview](docs/userstories.png)
 
-## Entity-relationship Diagram
-
-I created two ERD's, one for the Daily Journal and for for the Daily Quote.
+## Entity-relationship Diagram and Database schema
 
 ### JournalLog
 
@@ -148,13 +146,13 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 - **created_on**
   - This attribute represents the date when the quote was created, using a DateField
 
-![Entity-relationship Diagram](docs/ERD.png)
+![Entity-relationship Diagram](
 
 ## Testing
 
 ### Performance
 
-**Lighhouse**
+Lighhouse**
 
 - Performance: 75
 - Accessibility: 100
@@ -179,6 +177,8 @@ The website is tested and displays well in Google Chrome, Mozilla Firefox, Safar
 - Not used for this project. I am using jQuery, and JSHint gives an "Undefined variable" error when jQuery is used.
 
 **W3C HTML validator**
+
+- No errors
 
 **W3C CSS validator**
 
