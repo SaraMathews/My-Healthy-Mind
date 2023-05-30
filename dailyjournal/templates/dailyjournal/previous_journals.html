@@ -16,18 +16,18 @@
             </button>
             <div id="entry-{{ entry.id }}" class="collapse">
                 <div class="column ml-lg-3 mr-lg-3 form-group">
-                    <label for="id_created_on" aria-label="Date">Date:</label>
+                    <label for="id_created_on">Date:</label>
                     <input type="text" class="form-control" value="{{ entry.created_on }}" readonly id="id_created_on">
                 </div>
-                <div class="column ml-lg-3 mr-lg-3  form-group">
-                    <label for="inputContent" aria-label="Your Journal Entry">Your Journal Entry:</label>
+                <div class="column ml-lg-3 mr-lg-3 form-group">
+                    <label for="inputContent">Your Journal Entry:</label>
                     <textarea class="form-control" rows="10" readonly id="inputContent">{{ entry.content }}</textarea>
                 </div>
-                <div class="column ml-lg-3 mr-lg-3  form-group">
-                    <label for="id_rating" aria-label="How was your day?">How was your day?</label>
+                <div class="column ml-lg-3 mr-lg-3 form-group">
+                    <label for="id_rating">How was your day?</label>
                     <input type="text" class="form-control" value="{{ entry.rating }}" readonly id="id_rating">
                 </div>
-                <div class="column ml-lg-3 mr-lg-3  form-group journal-img">
+                <div class="column ml-lg-3 mr-lg-3 form-group journal-img">
                     <p aria-label="Photo of the day">Photo of the day:</p>
                     {% if entry.image %}
                     <img src="{{ entry.image.url }}" class="img-fluid journal-img" alt="Photo of the day">
