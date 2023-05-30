@@ -112,13 +112,16 @@ The Wireframe was made using Balsamiq Wireframes.
 
 ### Features left to implement
 
+- Filter Past Journals 
+A filter that lets the user search and retrieve Past Journal entries based on specific dates and daily ratings. 
+
 ## User Stories
 
 I created user stories in Github and assigned them to 5 different milestones (Daily Journal, User Experience Improvements, User Authentication, Home Page and Development) and applied appropriate labels to each one. I organized and prioritized the development tasks within the My Healthy Mind project.
 
 ![User stories overview](docs/userstories.png)
 
-## Entity-relationship Diagram and Database schema
+## Database schema & Entity-relationship Diagram
 
 ### JournalLog
 
@@ -146,7 +149,7 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 - **created_on**
   - This attribute represents the date when the quote was created, using a DateField
 
-![Entity-relationship Diagram](
+![Entity-relationship Diagram](docs/ERD.png)
 
 ## Testing
 
