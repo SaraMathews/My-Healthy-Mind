@@ -3,14 +3,13 @@ from django.views.generic import TemplateView
 from .models import DailyQuote
 from random import choice
 
-"""
-Renders the home page with a randomly selected quote from the database.
-If no quotes exists in the database, a default quote is shown instead.
-"""
-
 
 class QuoteView(TemplateView):
-    template_name = 'home_page.html'
+    """
+    Renders the home page with a randomly selected quote from the database.
+    If no quotes exists in the database, a default quote is shown instead.
+    """
+    template_name = 'home/home_page.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

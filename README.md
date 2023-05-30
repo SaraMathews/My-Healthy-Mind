@@ -165,6 +165,9 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 - No errors
 
+**Browser testing**
+The website is tested and displays well in Google Chrome, Mozilla Firefox, Safari and Microsoft Edge.
+
 ### Validator testing
 
 **PEP8 validator**
@@ -173,7 +176,7 @@ I created two ERD's, one for the Daily Journal and for for the Daily Quote.
 
 **JSHint**
 
--
+- Not used for this project. I am using jQuery, and JSHint gives an "Undefined variable" error when jQuery is used.
 
 **W3C HTML validator**
 
@@ -253,8 +256,6 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
   - Used to import the Lato font
 - **PEP8 validator (CI Python Linter)**
   - Used to check so the python code in my project adheres to the guidelines specified in PEP 8
-- JSHint
--
 - **W3C HTML & W3C CSS**
   - Used to check my HTML and CSS code for errors
 - **Lighthouse**
@@ -319,6 +320,8 @@ The steps below were followed to clone the repository locally:
 - uxwing.com - social media icons
 - Allauth - for autentication pages
 - https://tinypng.com/ - resize images
-**Inspired by**
+
+### Inspired by
+
 - Build a Personal Diary With Django and Python - https://realpython.com/django-diary-project-python/
 - Build a Personal Journal With Django and Python - https://betterprogramming.pub/build-a-personal-journal-with-django-and-python-f4835d27368c

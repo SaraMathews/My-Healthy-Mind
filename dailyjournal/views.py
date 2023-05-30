@@ -12,16 +12,14 @@ from django.contrib.auth.mixins import (
 )
 
 
-"""
-View for logging a Daily Journal.
-Allows the user to create a new journal entry.
-"""
-
-
 class LogJournalView(CreateView):
+    """
+    View for logging a Daily Journal.
+    Allows the user to create a new journal entry.
+    """
     model = JournalLog
     form_class = JournalForm
-    template_name = 'daily_journal.html'
+    template_name = 'dailyjournal/daily_journal.html'
     success_url = reverse_lazy('dailyjournal:log_journal')
 
     def form_valid(self, form):
@@ -35,15 +33,13 @@ class LogJournalView(CreateView):
         return super().form_valid(form)
 
 
-"""
-View for displaying a list of past journals
-Displays a list of past journals for the logged in user.
-"""
-
-
 class JournalListView(ListView):
+    """
+    View for displaying a list of past journals
+    Displays a list of past journals for the logged in user.
+    """
     model = JournalLog
-    template_name = 'previous_journals.html'
+    template_name = 'dailyjournal/previous_journals.html'
     context_object_name = 'journal_entries'
     ordering = ['-created_on']
 
@@ -52,18 +48,16 @@ class JournalListView(ListView):
         return queryset.filter(user=self.request.user)
 
 
-"""
-View for deleting a journal
-Allows the user to delete their own journals.
-"""
-
-
 class DeleteJournalEntryView(
     LoginRequiredMixin, UserPassesTestMixin, DeleteView
 ):
+    """
+    View for deleting a journal
+    Allows the user to delete their own journals.
+    """
     model = JournalLog
     success_url = reverse_lazy('dailyjournal:journal_list')
-    template_name = 'journallog_confirm_delete.html'
+    template_name = 'dailyjournal/journallog_confirm_delete.html'
 
     # Checks if the user passes the test to delete the journal
     def test_func(self):
@@ -86,18 +80,16 @@ class DeleteJournalEntryView(
         return response
 
 
-"""
-View for editing a journal
-Allows the user to edit their own journals.
-"""
-
-
 class EditJournalEntryView(LoginRequiredMixin,
                            UserPassesTestMixin,
                            UpdateView):
+    """
+    View for editing a journal
+    Allows the user to edit their own journals.
+    """
     model = JournalLog
     form_class = JournalForm
-    template_name = 'edit_journal.html'
+    template_name = 'dailyjournal/edit_journal.html'
     success_url = reverse_lazy('dailyjournal:journal_list')
 
     # Checks if the user passes the test to edit the journal

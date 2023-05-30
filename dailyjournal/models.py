@@ -3,14 +3,13 @@ from django import forms
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-"""
-Describes a user's journal.
-Includes fields for the owner of the journal, the date when the journal was
-created and the content.
-"""
-
 
 class JournalLog(models.Model):
+    """
+    Describes a user's journal.
+    Includes fields for the owner of the journal, the date when the journal was
+    created and the content.
+    """
     RATING_OPTIONS = (
         ('Amazing', 'Amazing'),
         ('Good', 'Good'),

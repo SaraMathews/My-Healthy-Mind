@@ -191,6 +191,10 @@ footer {
     border: 3px solid #5C4033;
 }
 
+#signup_form > p input {
+    display: block;
+    }
+
 /* Daily Journal Page */
 /* Journal form */
 .outer-container {
@@ -279,6 +283,5 @@ footer {
     .card-rounded {
         height: 500px;
         width: 22rem;
-
     }
 }

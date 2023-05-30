@@ -3,11 +3,7 @@ from django.forms import DateInput
 from .models import JournalLog
 from cloudinary.forms import CloudinaryFileField
 
-"""
-Form for creating and updating a journal.
-The user can specify the date when the journal was created, and add content to
-their journal.
-"""
+
 
 RATING_OPTIONS = (
     ('Amazing', 'Amazing'),
@@ -20,7 +16,11 @@ RATING_OPTIONS = (
 
 
 class JournalForm(forms.ModelForm):
-
+    """
+    Form for creating and updating a journal.
+    The user can specify the date when the journal was created, and add content to
+    their journal.
+    """
     rating = forms.CharField(
         max_length=20,
         widget=forms.Select(attrs={'id': 'id_rating'}, choices=RATING_OPTIONS),
