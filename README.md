@@ -316,13 +316,16 @@ The steps below were followed to clone the repository locally:
 - Bootstrap 4 documentation - www.getbootstrap.com
 - Bootstrap 4 - www.3schools.com
 - Bootstrap CSS Framework - Full Course for Beginners - https://www.youtube.com/watch?v=-qfEOE4vtxE
-- Django documentation - https://docs.djangoproject.com/en/4.2/
+- Django documentation (all sections relating to my project) - https://docs.djangoproject.com/en/4.2/
 - Python Django Web Framework - Full Course for Beginners - https://www.youtube.com/watch?v=F5mRW0jo-U4&list=PLTwiqKOPckq-B8XQQ-p7w4U11J6q8vwSo
 - https://css-tricks.com/couple-takes-sticky-footer/ - How to create a sticky footer
 - https://code-institute-room.slack.com/archives/C026PTF46F5/p1682785940128589?thread_ts=1682778905.761519&cid=C026PTF46F5 - Etag error Cloudinary
 - uxwing.com - social media icons
 - Allauth - for autentication pages
 - https://tinypng.com/ - resize images
+  **Create ERD**
+- https://dbeaver.io/
+- https://technology.amis.nl/database/quick-start-with-free-managed-postgresql-database-on-elephantsql/ 
 
 ### Inspired by
 
