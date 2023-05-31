@@ -14,7 +14,7 @@ My Healthy Mind is aimed at people who want to prioritize their mental well-bein
 
 The purpose of My Healthy Mind is to provide users with an online space to log their daily journal, and to be able to reflect on past journals. With a user-friendly interface and features like daily rating and uploading photos, the goal is to to promote mental wellness and a positive mindset.
 
-![Device Mockup](docs/)
+![Device Mockup](docs/device_mockup.png)
 
 ## UX and design
 
@@ -138,6 +138,8 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 - **image**
   - This attribute stores the image linked with the Journal using CaloudinaryField, which is a field specifically designed for storing Cloudinary image references.
 
+![Entity-relationship Diagram](docs/ERD.png)
+
 ### DailyQuote
 
 - **id**
@@ -148,8 +150,6 @@ I created user stories in Github and assigned them to 5 different milestones (Da
   - This attribute stores the name/details of the author of the Daily Quote, using a CharField
 - **created_on**
   - This attribute represents the date when the quote was created, using a DateField
-
-![Entity-relationship Diagram](docs/ERD.png)
 
 ## Testing
 
@@ -185,7 +185,23 @@ The website is tested and displays well in Google Chrome, Mozilla Firefox, Safar
 
 **W3C CSS validator**
 
-- No errors
+- base.html: Document checking completed. No errors or warnings to show.
+  
+- home.html : Document checking completed. No errors or warnings to show
+  
+- daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
+  
+- previous_journals.html: Document checking completed. No errors or warnings to show.
+  
+- journallog_confirm_delete.html: Document checking completed. No errors or warnings to show.
+  
+- edit_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
+  
+- signup.html: Document checking completed. No errors or warnings to show.
+  
+- login.html: Document checking completed. No errors or warnings to show.
+  
+- logout.html : Document checking completed. No errors or warnings to show.
 
 ### Functional testing
 
@@ -207,6 +223,12 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
 **Admin**
 
 ### Unfixed bugs
+
+## Security measures
+
+In order to maintain the security and privacy of the user's personal journal entries on My Healthy Mind website, I have implemented two measures. One is the usage of the {% csrf_token %} in the HTML forms. This token acts as a protective shield against potential attacks that could compromise the integrity of the user's journal data. It ensures that only authenticated and authorized users can submit, edit, and delete journal entries.
+
+Additionally, on the views, I have implemented a custom test function using the LoginRequiredMixin and UserPassesTestMixin. This test_func checks if the currently logged-in user matches the user associated with the object being accessed. By verifying the user's identity, it ensures that only authorized users can perform specific actions, such as deleting and editing a journal entry.
 
 ## Technologies
 
@@ -323,6 +345,7 @@ The steps below were followed to clone the repository locally:
 - uxwing.com - social media icons
 - Allauth - for autentication pages
 - https://tinypng.com/ - resize images
+- https://www.freepik.com/ - Background image
   **Create ERD**
 - https://dbeaver.io/
 - https://technology.amis.nl/database/quick-start-with-free-managed-postgresql-database-on-elephantsql/ 
