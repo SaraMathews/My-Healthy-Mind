@@ -16,7 +16,8 @@
                 platform allows you to
                 reflect on your experiences and emotions, and monitor your progress as you work
                 towards a happier and
-                healthier you.</p>
+                healthier you.
+            </p>
         </div>
     </div>
     <!--3 cards-->
@@ -31,11 +32,10 @@
                     <p class="card-text my-auto">Uncover the joy of daily journaling for a healthy mind. Express your
                         thoughts and experience personal growth as you
                         embrace the practise of journaling.
-
                     </p>
                     {% if user.is_authenticated %}
                     <a href="{% url 'dailyjournal:log_journal' %}" class="btn button mt-auto mx-auto">Log my Daily
-                        Journal</a>
+                    Journal</a>
                     {% else %}
                     <a href="{% url 'account_login' %}" class="btn button mt-auto mx-auto">Sign in to journal</a>
                     {% endif %}
@@ -60,18 +60,19 @@
                     <p class="card-text my-auto">Revisit your past journals, reflect, and continue your journey towards
                         a
                         healthier
-                        mind. Here, you can view all your past journal entries, edit them, or delete them.</p>
+                        mind. Here, you can view all your past journal entries, edit them, or delete them.
+                    </p>
                     {% if user.is_authenticated %}
                     <a href="{% url 'dailyjournal:journal_list' %}" class="btn button mt-auto mx-auto">View Past
-                        Journals
+                    Journals
                     </a>
                     {% else %}
                     <a href="{% url 'account_login' %}" class="btn button mt-auto mx-auto">Sign in to view Past
-                        Journals</a>
+                    Journals</a>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-    {% endblock %}
+{% endblock %}

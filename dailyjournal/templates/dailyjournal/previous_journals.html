@@ -12,7 +12,7 @@
         {% for entry in journal_entries %}
         <div class="pb-2 journal-entry">
             <button class="btn button btn-entry" data-toggle="collapse" data-target="#entry-{{ entry.id }}">
-                {{ entry.created_on }} - Click to expand
+            {{ entry.created_on }} - Click to expand
             </button>
             <div id="entry-{{ entry.id }}" class="collapse">
                 <div class="column ml-lg-3 mr-lg-3 form-group">
@@ -53,8 +53,6 @@
             <a href="#" class="btn button btn-view-more">View More</a>
         </div>
         {% endif %}
-
     </div>
 </div>
-
 {% endblock %}

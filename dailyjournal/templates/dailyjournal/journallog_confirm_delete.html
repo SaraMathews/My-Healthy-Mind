@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %}Delete Journal {{ entry.id }}{% endblock %}
-
 {% block content %}
 <!--Delete Journal confirmation-->
 <div class="container outer-container d-flex justify-content-center align-items-center pt-5">
@@ -13,7 +11,7 @@
                 <form method="post" class="text-center pr-5 mb-3">
                     {% csrf_token %}
                     <p id="confirmation-message"><strong>Are you sure you want to delete the Journal
-                            for {{ entry.created_on }}?</strong>
+                        for {{ entry.created_on }}?</strong>
                         <br>
                         Warning: Once deleted, the journal cannot be
                         recovered.

@@ -169,13 +169,29 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 - No errors
 
 ### Browser testing
+
 The website is tested and displays well in Google Chrome, Mozilla Firefox, Safari and Microsoft Edge.
 
 ### Validator testing
 
 ### PEP8 validator
+ 
+**dailyjournal app**
+- admin.py: no errors
+- models.py: no errors
+- forms.py: no errors
+- urls.py: no errors
+- views.py: no errors
 
-- No errors
+**home app**
+- admin.py: no errors
+- models.py: no errors
+- urls.py: no errors
+- views.py: no errors
+
+**myhealthymind project**
+settings.py: no errors
+urls.py: no errors 
 
 ### JSHint
 

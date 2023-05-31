@@ -1,10 +1,7 @@
 {% extends "base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
-
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-
 {% block content %}
 <div class="container-fluid p-0 first-container d-flex justify-content-center align-items-center">
     <div class="jumbotron jumbotron-fluid h-50 h-md-75 mb-0">
@@ -28,7 +25,7 @@
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
                     <button class="btn button" id="btn-account-signup" type="submit">{% trans "Signup" %}
-                        &raquo;</button>
+                    &raquo;</button>
                 </form>
             </div>
         </div>
