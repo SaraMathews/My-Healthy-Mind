@@ -1,120 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    {% load static %}
-    <title>My Healty Mind</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="My Healthy Mind is a website where you can 
-    log your Daily Journal and keep track of your thoughts and feelings. We want
-    to promote positivity and well-being.">
-    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-
-<body>
-
-    <!-- Logo. Partly copied from Bootstrap doc-->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-big">
-        <a class="navbar-brand logo" href="{% url 'home:home' %}">My Healthy Mind</a>
-
-        <button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <head>
+        {% load static %}
+        <title>My Healty Mind</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="My Healthy Mind is a website where you can 
+            log your Daily Journal and keep track of your thoughts and feelings. We want
+            to promote positivity and well-being.">
+        <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <!-- Logo. Partly copied from Bootstrap doc-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-big">
+            <a class="navbar-brand logo" href="{% url 'home:home' %}">My Healthy Mind</a>
+            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navigation with hamburger menu. Partly copied from Bootstrap doc-->
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                {% if user.is_authenticated %}
-                <li class="nav-item list-bg ml-auto" id="hamburger-home">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
-                </li>
-                <li class="nav-item list-bg ml-auto">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:log_journal' %}">Daily
+            </button>
+            <!-- Navigation with hamburger menu. Partly copied from Bootstrap doc-->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item list-bg ml-auto" id="hamburger-home">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
+                    </li>
+                    <li class="nav-item list-bg ml-auto">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:log_journal' %}">Daily
                         Journal</a>
-                </li>
-                <li class="nav-item list-bg ml-auto">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:journal_list' %}">Past
+                    </li>
+                    <li class="nav-item list-bg ml-auto">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'dailyjournal:journal_list' %}">Past
                         Journals</a>
-                </li>
-                {% else %}
-                <li class="nav-item list-bg ml-auto" id="hamburger-home">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
-                </li>
-                {% endif %}
-            </ul>
-            <!--Copied from I Think Therefore I Blog walkthrough navbar-->
-            <ul class="navbar-nav ml-auto">
-                {% if user.is_authenticated %}
-                <li class="nav-item list-bg ml-auto">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_logout' %}">Sign out</a>
-                </li>
-                {% else %}
-                <li class="nav-item list-bg ml-auto">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_login' %}">Sign in</a>
-                </li>
-                <li class="nav-item list-bg ml-auto" id="signup-home">
-                    <a class="nav-link ul-padding-hamburger" href="{% url 'account_signup' %}">Sign Up</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <!--Copied from I Think Therefore I Blog walkthrough messages-->
-        <div class="container-fluid container-messages">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                        {{ message | safe }}
+                    </li>
+                    {% else %}
+                    <li class="nav-item list-bg ml-auto" id="hamburger-home">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'home:home' %}">Home</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <!--Copied from I Think Therefore I Blog walkthrough navbar-->
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item list-bg ml-auto">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'account_logout' %}">Sign out</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item list-bg ml-auto">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'account_login' %}">Sign in</a>
+                    </li>
+                    <li class="nav-item list-bg ml-auto" id="signup-home">
+                        <a class="nav-link ul-padding-hamburger" href="{% url 'account_signup' %}">Sign Up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <!--Copied from I Think Therefore I Blog walkthrough messages-->
+            <div class="container-fluid container-messages">
+                <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        {% for message in messages %}
+                        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                            {{ message | safe }}
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
             </div>
-        </div>
-        <div class="bg-img">
-            {% block content %}
-            {% endblock content %}
-
-            {% block journalform %}
-            {% endblock journalform %}
-
-            {% block pastjournal %}
-            {% endblock pastjournal %}
-
-            {% block edit %}
-            {% endblock edit %}
-        </div>
-    </main>
-    <!-- Footer -->
-    <footer class="footer fixed-bottom text-center">
-        <p class="footer-p">Made by Sara Mathews</p>
-        <a href="https://www.facebook.com/" target="_blank"><img
+            <div class="bg-img">
+                {% block content %}
+                {% endblock content %}
+                {% block journalform %}
+                {% endblock journalform %}
+                {% block pastjournal %}
+                {% endblock pastjournal %}
+                {% block edit %}
+                {% endblock edit %}
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="footer fixed-bottom text-center">
+            <p class="footer-p">Made by Sara Mathews</p>
+            <a href="https://www.facebook.com/" target="_blank"><img
                 src="https://res.cloudinary.com/dfrqsofbo/image/upload/v1684911546/static/images/facebook-icon.10b65c429d5f.png"
-                alt="Facebook" class="social-media"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img
+                alt="Link to Facebook page. Opens in new window" class="social-media"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img
                 src="https://res.cloudinary.com/dfrqsofbo/image/upload/v1684911545/static/images/instagram.icon.e211fe8a5f27.png"
-                alt="Instagram" class="social-media"></a>
-        <a href="https://twitter.com/" target="_blank"><img
+                alt="Link to Instagram page. Opens in new window" class="social-media"></a>
+            <a href="https://twitter.com/" target="_blank"><img
                 src="https://res.cloudinary.com/dfrqsofbo/image/upload/v1684911546/static/images/twitter-icon.5fd40f6c35d0.png"
-                alt="Twitter" class="social-media"></a>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="{% static 'js/scripts.js' %}"></script>
-
-</body>
-
+                alt="Link to Twitter page. Opens in new window" class="social-media"></a>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
 </html>
