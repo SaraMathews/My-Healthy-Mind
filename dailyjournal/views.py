@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
 )
+from django.http import HttpResponseServerError
 
 
 class LogJournalView(CreateView):
@@ -23,6 +24,7 @@ class LogJournalView(CreateView):
     success_url = reverse_lazy('dailyjournal:log_journal')
 
     def form_valid(self, form):
+        raise Exception("Intentional 500 error")
         form.instance.user = self.request.user
         form.instance.image = self.request.FILES.get('image')
         messages.add_message(
