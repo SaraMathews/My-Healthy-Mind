@@ -74,7 +74,7 @@ The Wireframe was made using Balsamiq Wireframes.
 - The ability to view past journals allows the user to look back and reflect on previous days thoughts and feelings.
 
 ![Past Journals](docs/past_journals.png)
-![Past Journals expanded](
+![Past Journals expanded](docs/past_journals_expand.png)
 
 ### Delete Past Journal entries
 
@@ -91,7 +91,7 @@ The Wireframe was made using Balsamiq Wireframes.
 - On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
 - A success message is displayed when the journal has been updated sucessfully.
 
-![Edit Journal](docs/
+![Edit Journal](docs/edit_journal.png)
 ![Edit confirmation](docs/updated.png)
 
 ### Error pages
@@ -157,57 +157,57 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 
 ### Performance
 
-Lighhouse**
+### Lighhouse**
 
 - Performance: 75
 - Accessibility: 100
 - Bess Practices: 100
 - SEO: 100
 
-**WAVE Web Accessibility Evaluation Tools**
+### WAVE Web Accessibility Evaluation Tools**
 
 - No errors
 
-**Browser testing**
+### Browser testing
 The website is tested and displays well in Google Chrome, Mozilla Firefox, Safari and Microsoft Edge.
 
 ### Validator testing
 
-**PEP8 validator**
+### PEP8 validator
 
 - No errors
 
-**JSHint**
+### JSHint
 
 - Not used for this project. I am using jQuery, and JSHint gives an "Undefined variable" error when jQuery is used.
 
-**W3C HTML validator**
+### W3C HTML validator
 
 - No errors
 
-**W3C CSS validator**
+### W3C CSS validator
 
-- base.html: Document checking completed. No errors or warnings to show.
+- base.html: No errors or warnings to show.
   
-- home.html : Document checking completed. No errors or warnings to show
+- home.html : No errors or warnings to show
   
 - daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
   
-- previous_journals.html: Document checking completed. No errors or warnings to show.
+- previous_journals.html: No errors or warnings to show.
   
-- journallog_confirm_delete.html: Document checking completed. No errors or warnings to show.
+- journallog_confirm_delete.html: No errors or warnings to show.
   
 - edit_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
   
-- signup.html: Document checking completed. No errors or warnings to show.
+- signup.html: No errors or warnings to show.
   
-- login.html: Document checking completed. No errors or warnings to show.
+- login.html: No errors or warnings to show.
   
-- logout.html : Document checking completed. No errors or warnings to show.
+- logout.html : No errors or warnings to show.
 
 ### Functional testing
 
-Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories: Home Page, Daily journal, User Autenthication, Error Pages & Success messages and Admin. 
+Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories: Home Page, Daily journal, User Autenthication, Error Pages & Success messages, and Admin. 
 
 **Home Page**
 ![Test Navbar and Footer](docs/test_navbar_footer.png)
@@ -223,6 +223,7 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
 ![Test Error Pages & Success messages](docs/test_error_successmessages.png)
 
 **Admin**
+![Test Admin Page ](docs/test_user_authentication.png)
 
 ### Unfixed bugs
 
