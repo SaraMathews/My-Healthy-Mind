@@ -65,7 +65,7 @@ The Wireframe was made using Balsamiq Wireframes.
 - This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and upload a photo, the user can create a more personalised and memorable journal.
 - A success message is displayed when the journal has been successfully submitted.
 
-![Daily Journal](docs/daily_journal.png)
+![Daily Journal](docs/dailyjournal.png)
 ![Submit confirmation](docs/submitted.png)
 
 ### View Past Journal entries
@@ -74,7 +74,7 @@ The Wireframe was made using Balsamiq Wireframes.
 - The ability to view past journals allows the user to look back and reflect on previous days thoughts and feelings.
 
 ![Past Journals](docs/past_journals.png)
-![Past Journals expanded](docs/past_journals_expand.png)
+![Past Journals expanded](
 
 ### Delete Past Journal entries
 
@@ -91,7 +91,7 @@ The Wireframe was made using Balsamiq Wireframes.
 - On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
 - A success message is displayed when the journal has been updated sucessfully.
 
-![Edit Journal](docs/edit_journal.png)
+![Edit Journal](docs/
 ![Edit confirmation](docs/updated.png)
 
 ### Error pages
@@ -103,6 +103,8 @@ The Wireframe was made using Balsamiq Wireframes.
   - 404: Indicates that the requested resource could not be found on the server.
   - 403: Signifies that access to the requested resource is forbidden or restricted.
   - 500: Represents an internal server error, indicating that something went wrong on the server's side while processing the request.
+
+![Error 404](docs/error404.png)
 
 ### Admin page
 
