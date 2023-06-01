@@ -40,13 +40,13 @@ The Wireframe was made using Balsamiq Wireframes.
 - The navbar items differ depending on if the user is signed in or not.
 - A footer is displayed on the bottom of the page with links to social media platforms.
 
-![Homepage with navbar visitor](docs/header_navbar.png)
+![Homepage with navbar visitor](docs/navbar_visitor.png)
 ![Navbar user](docs/navbar_loggedin.png)
 
-### User autentication
+### User authentication
 
 - To be able to log a Daily Journal with the supporting features, the visitor of the webiste must first sign up. They can then sign in and sign out at any time. This feature of user authentication ensures secure access to the website's features.
-- Only registered users can sign in, log a journal, view past journals, edit and delete their journals.
+- Only registered users can sign in, log a journal, view past journals, edit and delete their journal entries.
 - When the user has either signed up, signed in or signed out, a success message will appear letting the user know the action was successfull.
 
 ![Sign up](docs/signup.png)
@@ -62,7 +62,7 @@ The Wireframe was made using Balsamiq Wireframes.
 
 ### Log Daily Journal
 
-- This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and upload a photo, the user can create a more personalised and memorable journal.
+- This features allows the users to record their daily thoughts, emotions and happenings of the day. With the additional features of rating their day and uploading a photo, the user can create a more personalised and memorable journal.
 - A success message is displayed when the journal has been successfully submitted.
 
 ![Daily Journal](docs/dailyjournal.png)
@@ -71,24 +71,24 @@ The Wireframe was made using Balsamiq Wireframes.
 ### View Past Journal entries
 
 - This feature lets the user view their past journal entries as a list, in a convenient way. When the user clicks on the list item for the journal they want to view, it expands to view the journal content. To collapse the opened jounal the user can click on the list item again.
-- The ability to view past journals allows the user to look back and reflect on previous days thoughts and feelings.
+- The ability to view past journals allows the user to look back and reflect on previous days, thoughts, and feelings.
 
 ![Past Journals](docs/past_journals.png)
 ![Past Journals expanded](docs/past_journals_expand.png)
 
 ### Delete Past Journal entries
 
-- On each journal there is a delete button that allows the user to delete journal entries that they no longer wish to keep.
+- On each journal there is a delete button that allows the user to delete Journal entries that they no longer wish to keep.
   It gives the user the flexibility to delete journals that no longer serve a purpose or that they would rather not have on record.
-- The user is taken to a confirmation page where they have to confirm they want to delete the journal, or they have the option to cancel the initiated deletion.
-- A success message is displayed when the journal has been deleted sucessfully.
+- The user is taken to a confirmation page where they have to confirm the deletion of the journal entry, or they have the option to cancel the initiated deletion.
+- A success message is displayed when the journal entry has been deleted sucessfully.
 
 ![Delete Journal confirm](docs/confirm_deletion.png)
 ![Delete Journal success](docs/deleted.png)
 
 ### Edit Past Journal entries
 
-- On each journal entry there is an edit button that lets the user edit the Journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
+- On each journal entry there is an edit button that lets the user edit the journal entry. This gives the user the ability to make changes or correct mistakes. The user can either save the updated form or cancel the ongoing edit.
 - A success message is displayed when the journal has been updated sucessfully.
 
 ![Edit Journal](docs/edit_journal.png)
@@ -97,29 +97,31 @@ The Wireframe was made using Balsamiq Wireframes.
 ### Error pages
 
 - I've included three error pages for the webiste.
-  Here is the 404 error page included below to illustrate the design presented to the user when they are redirected to an error page.
 - The layout remains consistent across all error pages, with the appropriate error message displayed for each specific error.
 
   - 404: Indicates that the requested resource could not be found on the server.
   - 403: Signifies that access to the requested resource is forbidden or restricted.
   - 500: Represents an internal server error, indicating that something went wrong on the server's side while processing the request.
 
+Below I have included the 404 error page to illustrate the design presented to the user when they are redirected to an error page.
+
 ![Error 404](docs/error404.png)
 
 ### Admin page
 
-- While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete Daily Quotes and handle management regarding the Journal features, and users.
+- While on the Admin page the administrator can manage and maintain features on the website. They can create, edit or delete daily quotes, and handle management regarding the journal features, and users.
 
 ![Admin page](docs/admin.png)
 
 ### Features left to implement
 
-- Filter Past Journals 
-A filter that lets the user search and retrieve Past Journal entries based on specific dates and daily ratings. 
+**Filter Past Journals**
+
+- A filter that lets the user search and retrieve past journal entries based on specific dates and daily ratings.
 
 ## User Stories
 
-I created user stories in Github and assigned them to 5 different milestones (Daily Journal, User Experience Improvements, User Authentication, Home Page and Development) and applied appropriate labels to each one. I organized and prioritized the development tasks within the My Healthy Mind project.
+I created user stories in Github and assigned them to 5 different milestones (Daily Journal, User Experience Improvements, User Authentication, Home Page and Development) and applied appropriate labels to each one. I organized and prioritized the tasks within the My Healthy Mind project.
 
 ![User stories overview](docs/userstories.png)
 
@@ -157,7 +159,7 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 
 ### Performance
 
-### Lighhouse**
+### Lighhouse
 
 - Performance: 75
 - Accessibility: 100
@@ -177,6 +179,7 @@ The website is tested and displays well in Google Chrome, Mozilla Firefox, Safar
 ### PEP8 validator
  
 **dailyjournal app**
+
 - admin.py: no errors
 - models.py: no errors
 - forms.py: no errors
@@ -184,46 +187,50 @@ The website is tested and displays well in Google Chrome, Mozilla Firefox, Safar
 - views.py: no errors
 
 **home app**
+
 - admin.py: no errors
 - models.py: no errors
 - urls.py: no errors
 - views.py: no errors
 
 **myhealthymind project**
-settings.py: no errors
-urls.py: no errors 
+
+- settings.py: no errors
+- urls.py: no errors 
 
 ### JSHint
 
 - Not used for this project. I am using jQuery, and JSHint gives an "Undefined variable" error when jQuery is used.
 
-### W3C HTML validator
+### W3C CSS validator
 
 - No errors
 
-### W3C CSS validator
+### W3C HTML validator
 
-- base.html: No errors or warnings to show.
+- base.html: No errors or warnings to show
   
 - home.html : No errors or warnings to show
   
-- daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
+- daily_journal.html:
+  - "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
   
-- previous_journals.html: No errors or warnings to show.
+- previous_journals.html: No errors or warnings to show
   
-- journallog_confirm_delete.html: No errors or warnings to show.
+- journallog_confirm_delete.html: No errors or warnings to show
   
-- edit_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
+- edit_journal.html:
+  - "Error: Attribute maxlength is not allowed on the select element at this point." - I will maintain the current implementation with the maxlength attribute on the select element because I am not completely sure how to resolve it, and with very little time left before the submission date, I don't want to compromise the current code and potentially face bigger issues and errors.
   
-- signup.html: No errors or warnings to show.
+- signup.html: No errors or warnings to show
   
-- login.html: No errors or warnings to show.
+- login.html: No errors or warnings to show
   
-- logout.html : No errors or warnings to show.
+- logout.html : No errors or warnings to show
 
 ### Functional testing
 
-Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories: Home Page, Daily journal, User Autenthication, Error Pages & Success messages, and Admin. 
+Below, I have summarized the testing in screenshots of several Excel sheets for an easier overview. I have separated the sheets into the following categories: Home Page, Daily journal, User Autenthication, Error Pages & Success messages, and Admin.
 
 **Home Page**
 ![Test Navbar and Footer](docs/test_navbar_footer.png)
@@ -236,12 +243,14 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
 ![Test User Autenthication](docs/test_user_authentication.png)
 
 **Error Pages & Success messages**
-![Test Error Pages & Success messages](docs/test_error_successmessages.png)
+![Test Error Pages ](docs/test_error_pages.png)
+![Test Success messages ](docs/test_success_messages.png)
 
 **Admin**
 ![Test Admin Page ](docs/test_user_authentication.png)
 
 ### Unfixed bugs
+daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." 
 
 ## Security measures
 
@@ -281,17 +290,21 @@ Additionally, on the views, I have implemented a custom test function using the 
     - urllib3==1.26.15
     - django-cloudinary-storage==0.3.0
 - **Django**
-  - This project was created using the Django framework.
+  - This project was created using the Django framework
 - **Balsamic Wireframes**
   - Used to create the wireframes
 - **Lucidchart**
   - Used to make the MindMap
 - **ui.dev/amiresponsive**
   - Used to create the Device Mockup image
+- **DBeaver**
+  - Used to create the ERD
 - **uxwing.com**
   - Used for the social media icons
 - **CodeAnywhere**
   - The IDE used for writing the code
+- **Git**
+  - Version control used to track changes in code during the development of the project
 - **Github**
   - Used for storing my project
 - **Heroku**
@@ -359,12 +372,13 @@ The steps below were followed to clone the repository locally:
 - Bootstrap CSS Framework - Full Course for Beginners - https://www.youtube.com/watch?v=-qfEOE4vtxE
 - Django documentation (all sections relating to my project) - https://docs.djangoproject.com/en/4.2/
 - Python Django Web Framework - Full Course for Beginners - https://www.youtube.com/watch?v=F5mRW0jo-U4&list=PLTwiqKOPckq-B8XQQ-p7w4U11J6q8vwSo
-- https://css-tricks.com/couple-takes-sticky-footer/ - How to create a sticky footer
-- https://code-institute-room.slack.com/archives/C026PTF46F5/p1682785940128589?thread_ts=1682778905.761519&cid=C026PTF46F5 - Etag error Cloudinary
+- How to create a sticky footer - https://css-tricks.com/couple-takes-sticky-footer/ 
+- Etag error Cloudinary - https://code-institute-room.slack.com/archives/C026PTF46F5/p1682785940128589?thread_ts=1682778905.761519&cid=C026PTF46F5 
 - uxwing.com - social media icons
+- Google fonts - Lato font
 - Allauth - for autentication pages
-- https://tinypng.com/ - resize images
-- https://www.freepik.com/ - Background image
+- Resize images - https://tinypng.com/ 
+- Background image - https://www.freepik.com/ 
   **Create ERD**
 - https://dbeaver.io/
 - https://technology.amis.nl/database/quick-start-with-free-managed-postgresql-database-on-elephantsql/ 
