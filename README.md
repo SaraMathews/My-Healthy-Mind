@@ -250,7 +250,7 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
 ![Test Admin Page ](docs/test_user_authentication.png)
 
 ### Unfixed bugs
-daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point.".I will be correcting this error in the future.
+daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point.". I will be correcting this error in the future.
 
 ## Security measures
 
@@ -380,7 +380,9 @@ The steps below were followed to clone the repository locally:
 - Allauth - for autentication pages
 - Resize images - https://tinypng.com/
 - Background image - https://www.freepik.com/
-  **Create ERD**
+  
+### Create ERD
+
 - https://dbeaver.io/
 - https://technology.amis.nl/database/quick-start-with-free-managed-postgresql-database-on-elephantsql/ 
 
