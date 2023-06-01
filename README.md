@@ -70,7 +70,7 @@ The Wireframe was made using Balsamiq Wireframes.
 
 ### View Past Journal entries
 
-- This feature lets the user view their past journal entries as a list, in a convenient way. When the user clicks on the list item for the journal they want to view, it expands to view the journal content. To collapse the opened jounal the user can click on the list item again.
+- This feature lets the user view their past journal entries as a list, in a convenient way. When the user clicks on the list item for the journal they want to view, it expands to view the journal content. To collapse the opened journal the user can click on the list item again.
 - The ability to view past journals allows the user to look back and reflect on previous days, thoughts, and feelings.
 
 ![Past Journals](docs/past_journals.png)
@@ -159,7 +159,7 @@ I created user stories in Github and assigned them to 5 different milestones (Da
 
 ### Performance
 
-### Lighhouse
+### Lighthouse
 
 - Performance: 75
 - Accessibility: 100
@@ -196,7 +196,7 @@ The website is tested and displays well in Google Chrome, Mozilla Firefox, Safar
 **myhealthymind project**
 
 - settings.py: no errors
-- urls.py: no errors 
+- urls.py: no errors
 
 ### JSHint
 
@@ -250,7 +250,7 @@ Below, I have summarized the testing in screenshots of several Excel sheets for 
 ![Test Admin Page ](docs/test_user_authentication.png)
 
 ### Unfixed bugs
-daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point." 
+daily_journal.html: "Error: Attribute maxlength is not allowed on the select element at this point.".I will be correcting this error in the future.
 
 ## Security measures
 
@@ -333,7 +333,7 @@ Additionally, on the views, I have implemented a custom test function using the 
 The git commands below were used throughout development to push code to the remote repository in GitHub:
 
 - `git add .` - This command was used to add a change in the working directory to the staging area.
-- `git commit -m "message" `-This command was used to save changes to the local repository. A brief description of what has changed and when.
+- `git commit -m "message" ` -This command was used to save changes to the local repository. A brief description of what has changed and when.
 - `git push`- This command was used to push all commits to the remote repository on GitHub.
 
 ### Deploy to Heroku
@@ -367,18 +367,19 @@ The steps below were followed to clone the repository locally:
 - My mentor Daisy McGirr
   - https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_
 - Tutor Assistance
+- Stack Overflow
 - Bootstrap 4 documentation - www.getbootstrap.com
 - Bootstrap 4 - www.3schools.com
 - Bootstrap CSS Framework - Full Course for Beginners - https://www.youtube.com/watch?v=-qfEOE4vtxE
 - Django documentation (all sections relating to my project) - https://docs.djangoproject.com/en/4.2/
 - Python Django Web Framework - Full Course for Beginners - https://www.youtube.com/watch?v=F5mRW0jo-U4&list=PLTwiqKOPckq-B8XQQ-p7w4U11J6q8vwSo
 - How to create a sticky footer - https://css-tricks.com/couple-takes-sticky-footer/ 
-- Etag error Cloudinary - https://code-institute-room.slack.com/archives/C026PTF46F5/p1682785940128589?thread_ts=1682778905.761519&cid=C026PTF46F5 
+- Etag error Cloudinary - https://code-institute-room.slack.com/archives/C026PTF46F5/p1682785940128589?thread_ts=1682778905.761519&cid=C026PTF46F5
 - uxwing.com - social media icons
 - Google fonts - Lato font
 - Allauth - for autentication pages
-- Resize images - https://tinypng.com/ 
-- Background image - https://www.freepik.com/ 
+- Resize images - https://tinypng.com/
+- Background image - https://www.freepik.com/
   **Create ERD**
 - https://dbeaver.io/
 - https://technology.amis.nl/database/quick-start-with-free-managed-postgresql-database-on-elephantsql/ 
